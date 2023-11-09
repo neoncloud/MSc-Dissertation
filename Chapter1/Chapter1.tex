@@ -5,75 +5,42 @@
 \begin{spacing}{1.5}
 \setlength{\parskip}{0.3in}
 
-The first chapter of the dissertation is almost invariably the Introduction. Generally, its purpose is to lead the readers into the problem you intend to attack in the project, to set the scene. The main points here consist of the background to the problem and your motivation in solving it. This then leads into the objectives and the scope of the project. It is good to conclude your Introduction with a section on the layout of the dissertation. It prepares the readers for what is to come
-
 \section{Background}
 
-
-Background goes here. Also you can put in some references~\cite{ronneberger2015unet}.
-
-Here is a sample of table in \autoref{tabelsample}
-
-\begin{table}[ht]
-\centering
-\caption{A table without vertical lines.}
-\label{tabelsample}
-\begin{tabular}[t]{lcc}
-\toprule
-&Treatment A&Treatment B\\
-\midrule
-John Smith&1&2\\
-Jane Doe&--&3\\
-Mary Johnson&4&5\\
-\bottomrule
-\end{tabular}
-\end{table}%
-
-Use  \texttt{$\backslash$newpage} to force start a new page.
-
-\newpage
-
-Also can try to refer to this image in \autoref{fig:boundingboxexample}. Notice that the \texttt{.eps} and \texttt{.pdf} format vector graphs are favoured, because:
-
-\begin{enumerate}
-    \item they can be zoomed-in to check the detail.
-    \item text in such formats are search-able.
-\end{enumerate}
-
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=4in, fbox]{Chapter1/boundingbox.eps}
-\caption{Bounding-box example of cars.}
-\label{fig:boundingboxexample} 
-\end{figure}
-
-Try to insert a math equation as in \autoref{eq:euler}. If you wanna try the in-line mathematical, here is a sample $\alpha = \pi \cdot \frac{1}{\Theta}$.
-
-\begin{equation}
-\label{eq:euler}
-    e^{ix}= \cos{x} + i \sin{x}
-\end{equation}
-
-Also here is a sample for footnote and hyperlink url\footnote{\url{https://github.com/doem97}}.
-
-When mention some file formats can use \texttt{music.mp3}, \texttt{latex.pdf}, etc.
-
-If there are any update of the dissertation standard, or you want to contribute to the \texttt{NTU-EEE-MSc-Dissertation-Template} project too, kindly send an E-mail to me. Thank you :)
+Facial appearance plays a pivotal role in an individual's self-confidence and perception of health and beauty. Among the various factors that contribute to facial aesthetics, the presence of facial blemishes such as acne and pigmentation is critical. These imperfections not only affect one's physical appearance but also have significant psychological and emotional consequences.  Consumers across different age groups and skin tones use various skin treatments such as topical skin care products, chemical peeling, laser treatment, etc. to treat these blemishes to improve their skin appearance.
+% TODO: Add supporting material
+The relentless pursuit of beauty has catalyzed the growth of an expansive skincare market. Consumers' increasing demand for aesthetic improvement has driven skincare manufacturers to seek intuitive tools that can vividly demonstrate the long-term benefits of their products. Such a tool would enable consumers to visualize and trust the efficacy of skincare products without the need for extensive real-image data collection. Additionally, it would allow manufacturers to gather user feedback objectively, measure the therapeutic effectiveness of their products, and refine their offerings to better meet consumer needs. This pursuit aligns with a broader trend where visual representation and consumer trust are paramount, and where the market's ability to provide clear evidence of product benefits can significantly influence purchasing decisions.
 
 \section{Motivation}
 
+However, consumers have limited ability to assess the efficacy of skin care treatments designed to address blemishes before starting a treatment\cite{doi:10.2352/EI.2023.35.7.IMAGE-276}. This is partially due to the complex physiological and optical properties of skin present a significant challenge in developing a model that accurately measures and simulates the appearance and evolution of skin blemishes. There is a dearth of effective models that can convey the visually appealing changes of blemish evolution to consumers, making the choice of the right skincare product to be more a trial-and-error process, during which individuals may need to use the product for a period of time to see the skin improvement. With robust pigmentation simulation tools, this uncertainty can be addressed. Furthermore, these tools would enable researchers and product developers to accurately predict how different formulations and ingredients impact the appearance of facial blemishes over time.
+
+To address this critical gap, we propose an effective and efficient method for simulating changes in skin blemishes in a physics-based modelling manner. Although recent deep generative models, such as Generative Adversarial Networks\cite{goodfellowGenerativeAdversarialNetworks2014} (GANs) and diffusion models\cite{DBLP:conf/nips/HoJA20,rombach2021highresolution}, have made prominent progress in image generation and manipulation, we find that there are two main challenges in applying such methods in the blemish simulation task. The first challenge is the collection and labelling of a large amount of high-fidelity skin data. It is well known that deep generative models are data-starving. Lacking a large amount of high-quality training data leads to unrealistic output, artifacts, or even modal collapse. The second challenge is the difficulty of defining the distributions and variations of skin blemishes. The deep generative model is intrinsically conducting distribution mapping on images. While it is easy to define distributions in the task of style transfer\cite{DBLP:conf/iclr/DumoulinSK17,DBLP:conf/iccv/ZhuPIE17, DBLP:journals/corr/GatysEB15a} according to image styles, such as art painting and sketching, the appearance status of acne and pigmentation, it improves or worsens, is hard to classify due to the lack of properly labelled data. Thus, the output of a deep neural network could have entangled features, creating an unacceptable perception to users.
+
+%Moreover, the output of deep neural network could be difficult to be controlled, features and appearance of spots may be entangled with each other, making an unacceptable perception to users.
+%Physics-Based modelling for Precise Control
 
 \section{Objectives and Specifications}
 
+Motivated by the above discussion, we seek parametric techniques to achieve lightweight and stable simulation and propose a physics-based modelling method for simulating skin acne and pigmentation changes. Our method is based on the domain knowledge of skin research that the appearance of facial skin blemishes: acne, and pigmentations, are related to subcutaneous melanin and haemoglobin chromophores. Hence, we propose to model the spatial distributions of melanin and haemoglobin. First, we conduct a color space transformation to extract chromophore components from sRGB images. Based on the skin scattering properties, we then construct the relative spatial distributions for each component by Sum-of-Gaussians. This enables our method to perform realistic blemish simulation, precisely modifying the appearance of facial pigmentation by tuning the parameters of the fitted model.
+
+% Validation and User Perception Study
+To validate that our proposed method can achieve realistic results, we first conducted a visual comparison study to compare our simulated images and the ground-truth images from our self-collected dataset, where temporal data reflects long-term skin blemish changes. Our results demonstrated that a high degree of realism is achieved by our simulations when compared to ground-truth images. Secondly, we compared the proposed method with some current generalized image editing/generation algorithms or software. Compared to these methods, our method achieved natural-looking editing of skin blemishes with lower FID scores while producing fewer artifacts than deep learning methods. Furthermore, we conducted a visual perception study to quantitatively assess the discernment abilities of individuals between simulated images and authentic ones. The findings demonstrated that our approach generates realistic representations of skin blemish changes.
 
 
 \section{Major contribution of the Dissertation}
 
-
+This innovative approach not only addresses a pressing need in the skin care industry but also promises to impact the product development processes. By providing a reliable tool for simulating and assessing skin blemish changes, our methodology equips skincare researchers and developers with the means to create more effective and targeted products. Moreover, it empowers consumers to make informed choices regarding their skincare routines. We summarize the contribution of our work as follows:
+\begin{itemize}
+    \item We identify the problem of blemish change simulation, utilizing a physics-based modelling approach to approximate the optical properties of the skin. By adjusting the parameters of the fitted model, the appearance of skin blemishes can be modified, thereby achieving blemish change simulation.
+    \item Our research provides a new use case for the application of computer vision algorithms in the cosmetic industry and offers promising prospects in product development.
+    \item The visualization results and perception study demonstrate that our method achieves a realistic skin blemish change simulation, suggesting that our physics-based modelling technique is a robust tool for skin science research.
+          % and people hardly discriminate the simulated face images from ground-truth images.
+\end{itemize}
 
 \section{Organisation of the Dissertation}
 
+% TODO
 
 \end{spacing}
 %=== END OF CHAPTER ONE ===

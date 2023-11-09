@@ -19,44 +19,47 @@ A level-1 auxiliary file: Chapter6/Chapter6.aux
 The style file: unsrt.bst
 A level-1 auxiliary file: Appendix/appendix.aux
 Database file #1: Ref/References.bib
-You've used 1 entry,
+Warning--empty journal in goodfellowGenerativeAdversarialNetworks2014
+Warning--empty year in goodfellowGenerativeAdversarialNetworks2014
+You've used 7 entries,
             1791 wiz_defined-function locations,
-            468 strings with 4065 characters,
-and the built_in function-call counts, 405 in all, are:
-= -- 41
-> -- 11
+            506 strings with 5854 characters,
+and the built_in function-call counts, 1893 in all, are:
+= -- 137
+> -- 142
 < -- 1
-+ -- 4
-- -- 3
-* -- 23
-:= -- 58
-add.period$ -- 4
-call.type$ -- 1
-change.case$ -- 1
++ -- 49
+- -- 42
+* -- 140
+:= -- 316
+add.period$ -- 21
+call.type$ -- 7
+change.case$ -- 7
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 21
-empty$ -- 39
-format.name$ -- 3
-if$ -- 98
+cite$ -- 9
+duplicate$ -- 77
+empty$ -- 167
+format.name$ -- 42
+if$ -- 414
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 1
-pop$ -- 6
+int.to.str$ -- 7
+missing$ -- 6
+newline$ -- 36
+num.names$ -- 9
+pop$ -- 33
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 14
+skip$ -- 37
 stack$ -- 0
-substring$ -- 32
-swap$ -- 11
+substring$ -- 77
+swap$ -- 20
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 4
-width$ -- 2
-write$ -- 14
+warning$ -- 2
+while$ -- 13
+width$ -- 8
+write$ -- 72
+(There were 2 warnings)
