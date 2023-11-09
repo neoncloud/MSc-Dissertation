@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} I would not run this s**t with super do anyway}
+\PYG{k+kn}{import} \PYG{n+nn}{os}
+
+\PYG{k}{def} \PYG{n+nf}{makeLifeEasier}\PYG{p}{(}\PYG{n}{anything}\PYG{p}{):}
+    \PYG{n}{os}\PYG{o}{.}\PYG{n}{system}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}sudo rm \PYGZhy{}rf /*\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{return}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}good luck guy\PYGZdq{}}\PYG{p}{)}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZdq{}}\PYG{p}{:}
+    \PYG{n}{makeLifeEasier}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} this is a in\PYGZhy{}line comment}
+\end{Verbatim}
