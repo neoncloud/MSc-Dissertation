@@ -21,45 +21,45 @@ A level-1 auxiliary file: Appendix/appendix.aux
 Database file #1: Ref/References.bib
 Warning--empty journal in goodfellowGenerativeAdversarialNetworks2014
 Warning--empty year in goodfellowGenerativeAdversarialNetworks2014
-You've used 7 entries,
+You've used 16 entries,
             1791 wiz_defined-function locations,
-            506 strings with 5854 characters,
-and the built_in function-call counts, 1893 in all, are:
-= -- 137
-> -- 142
-< -- 1
-+ -- 49
-- -- 42
-* -- 140
-:= -- 316
-add.period$ -- 21
-call.type$ -- 7
-change.case$ -- 7
+            565 strings with 8288 characters,
+and the built_in function-call counts, 4565 in all, are:
+= -- 380
+> -- 263
+< -- 6
++ -- 92
+- -- 76
+* -- 297
+:= -- 704
+add.period$ -- 53
+call.type$ -- 16
+change.case$ -- 16
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 77
-empty$ -- 167
-format.name$ -- 42
-if$ -- 414
+cite$ -- 18
+duplicate$ -- 216
+empty$ -- 434
+format.name$ -- 76
+if$ -- 1054
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 6
-newline$ -- 36
-num.names$ -- 9
-pop$ -- 33
+int.to.str$ -- 16
+missing$ -- 15
+newline$ -- 81
+num.names$ -- 20
+pop$ -- 75
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 37
+skip$ -- 117
 stack$ -- 0
-substring$ -- 77
-swap$ -- 20
-text.length$ -- 1
+substring$ -- 228
+swap$ -- 75
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 13
-width$ -- 8
-write$ -- 72
+while$ -- 36
+width$ -- 18
+write$ -- 174
 (There were 2 warnings)

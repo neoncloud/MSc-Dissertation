@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.6)  9 NOV 2023 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.6)  19 NOV 2023 22:19
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -660,7 +660,7 @@ LaTeX Info: Redefining \nameref on input line 53.
 \openout2 = `Title/coverpage.aux'.
 
  (./Title/coverpage.tex
-<Title/NTU-LOGO-bw.pdf, id=156, 557.14447pt x 199.78339pt>
+<Title/NTU-LOGO-bw.pdf, id=164, 557.14447pt x 199.78339pt>
 File: Title/NTU-LOGO-bw.pdf Graphic file (type pdf)
 <use Title/NTU-LOGO-bw.pdf>
 Package pdftex.def Info: Title/NTU-LOGO-bw.pdf  used on input line 5.
@@ -802,16 +802,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
  (./Chapter1/Chapter1.tex
 Chapter 1.
 
-Overfull \hbox (3.43538pt too wide) in paragraph at lines 12--13
-\OT1/ptm/m/n/12 care mar-ket. Con-sumers' in-creas-ing de-mand for aes-thetic im-prove-ment has driven
- []
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13 
-      [1
+l.14 \section
+             {Motivation} [1
 
 
 ] [2] [3]
@@ -828,12 +823,17 @@ Chapter 2.
 
 
 
-] [7])
+]
+Overfull \hbox (3.99963pt too wide) in paragraph at lines 19--20
+\OT1/ptm/m/n/12 oxy-Hemoglobin (oxygen-rich) and deoxy-Hemoglobin (oxygen-poor). These
+ []
+
+[7] [8] [9] [10])
 \openout2 = `Chapter3/Chapter3.aux'.
 
  (./Chapter3/Chapter3.tex
 Chapter 3.
-[8
+[11
 
 
 
@@ -843,7 +843,7 @@ Chapter 3.
 
  (./Chapter4/Chapter4.tex
 Chapter 4.
-[9
+[12
 
 
 
@@ -853,7 +853,7 @@ Chapter 4.
 
  (./Chapter5/Chapter5.tex
 Chapter 5.
-[10
+[13
 
 
 
@@ -863,21 +863,21 @@ Chapter 5.
 
  (./Chapter6/Chapter6.tex
 Chapter 6.
-[11
+[14
 
 
 
 
-] [12]) (./main.bbl [13
+] [15]) (./main.bbl [16
 
 
 
-]) [14]
+] [17]) [18]
 \openout2 = `Appendix/appendix.aux'.
 
  (./Appendix/appendix.tex
 Appendix A.
-[15
+[19
 
 
 ]
@@ -892,25 +892,25 @@ LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 6.
  (d:/texlive/2022/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-))) [16
+))) [20
 
 ] (./main.aux (./Title/coverpage.aux) (./Title/titlepage.aux) (./Title/SoO.aux) (./Title/SDS.aux) (./Title/AAS.aux) (./Front/Abstract.aux) (./Front/Acknowledgement.aux) (./Front/Acronyms.aux) (./Front/Symbols.aux) (./Chapter1/Chapter1.aux) (./Chapter2/Chapter2.aux) (./Chapter3/Chapter3.aux) (./Chapter4/Chapter4.aux) (./Chapter5/Chapter5.aux) (./Chapter6/Chapter6.aux) (./Appendix/appendix.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F1CFB6A3AC22F4782F4AFD0D7AD1EC03;4097.
+(rerunfilecheck)             Checksum: 3D20719378E0025E3EFE2E02C0E1A3B3;4991.
  ) 
 Here is how much of TeX's memory you used:
- 17815 strings out of 478268
- 315101 string characters out of 5850346
- 732568 words of memory out of 5000000
- 35503 multiletter control sequences out of 15000+600000
+ 17841 strings out of 478268
+ 315752 string characters out of 5850346
+ 733017 words of memory out of 5000000
+ 35514 multiletter control sequences out of 15000+600000
  496370 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,117p,1688b,686s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,13n,117p,1688b,686s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {d:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (29 pages, 159287 bytes).
+Output written on main.pdf (33 pages, 172388 bytes).
 PDF statistics:
- 403 PDF objects out of 1000 (max. 8388607)
- 349 compressed objects within 4 object streams
- 74 named destinations out of 1000 (max. 500000)
- 310 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 453 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 89 named destinations out of 1000 (max. 500000)
+ 326 words of extra memory for PDF output out of 10000 (max. 10000000)
 

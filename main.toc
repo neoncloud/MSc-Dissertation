@@ -11,28 +11,30 @@
 \contentsline {section}{\numberline {1.4}Major contribution of the Dissertation}{4}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Organisation of the Dissertation}{5}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Literature Review}{6}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Overview}{6}{section.2.1}%
-\contentsline {section}{\numberline {2.2}One}{6}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Two}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Three}{7}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Approach}{8}{chapter.3}%
-\contentsline {section}{\numberline {3.1}One}{8}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Two}{8}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Three}{8}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Test and Experiments}{9}{chapter.4}%
-\contentsline {section}{\numberline {4.1}One}{9}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Two}{9}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Three}{9}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Discussion}{10}{chapter.5}%
-\contentsline {section}{\numberline {5.1}One}{10}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Two}{10}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Three}{10}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Conclusion and Recommendations}{11}{chapter.6}%
-\contentsline {section}{\numberline {6.1}One}{11}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Two}{11}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Three}{12}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Four}{12}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Six}{12}{subsection.6.4.1}%
-\contentsline {chapter}{References}{13}{chapter*.11}%
-\contentsline {chapter}{Appendix \numberline {A}Introduction of Appendix}{15}{appendix.a.A}%
-\contentsline {chapter}{Appendix \numberline {B}Sample Code}{16}{appendix.a.B}%
+\contentsline {section}{\numberline {2.1}Skin Chromophores \& Pigmentation}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Skin Modeling \& Rendering Techniques}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Controllable Facial Image Editing}{8}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Objectives and Definitions}{8}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Dataset and Stability}{8}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Controllability}{9}{subsection.2.3.3}%
+\contentsline {chapter}{\numberline {3}Methods}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}One}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Two}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Three}{11}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Test and Experiments}{12}{chapter.4}%
+\contentsline {section}{\numberline {4.1}One}{12}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Two}{12}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Three}{12}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Discussion}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}One}{13}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Two}{13}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Three}{13}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Conclusion and Recommendations}{14}{chapter.6}%
+\contentsline {section}{\numberline {6.1}One}{14}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Two}{14}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Three}{15}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Four}{15}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Six}{15}{subsection.6.4.1}%
+\contentsline {chapter}{References}{16}{chapter*.11}%
+\contentsline {chapter}{Appendix \numberline {A}Introduction of Appendix}{19}{appendix.a.A}%
+\contentsline {chapter}{Appendix \numberline {B}Sample Code}{20}{appendix.a.B}%

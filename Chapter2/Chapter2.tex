@@ -5,20 +5,53 @@
 \begin{spacing}{1.5}
 \setlength{\parskip}{0.3in}
 
-\section{Overview}
+% \section{Overview}
+In this chapter, we first review the definition and physiologic features of skin pigmentation. We will then review the field of computer graphics and discuss how to model skin and pigmentation to achieve realistic skin image rendering. Finally, we turn our attention to the field of computer vision, where we will review state-of-the-art image modeling and editing methods and assess the degree of fit and gaps between the goals of this task and existing methods.
+% In this section, we will firstly review the data-driven approach to generating and editing portrait images, a currently popular paradigm. This involves training a deep neural network on a large dataset of portrait images to model the distribution of these images and obtaining high-quality portrait images through sampling. Additionally, we will discuss another field aimed at generating images via computation: computer graphics. Within this field, rendering skin images means explicitly modeling the skin and obtaining pixel values by solving the rendering equation. We will elucidate how we identify issues and limitations within these two domains and derive inspiration from them.
+% , and discuss why we prefer to use a physics-based modelling approach by comparing it with deep learning methods and addressing the limitations of the current data-driven-based approaches.
+% 研究对象
+\section{Skin Chromophores \& Pigmentation}
 
-Then comes the main part of your work. To lay the ground, there should first be a chapter on what has been done before on the problem - a Literature Review. This is an important section because it shows that you do not narrowly focus only on what you do, but are aware of the
-related work elsewhere, some of which might be instructive to your solving the problem. It can also explain why you are taking the direction you do.
+What gives our skin its diverse colors? When light is transmitted into the skin, energy of different wavelengths is selectively absorbed by the chromophores, scattered by the skin tissues and then observed by us and rendered in unique colors. The color of human skin and skin pigmentations is primarily influenced by several key chromophores, namely \textit{Melanin}, \textit{Hemoglobin}, \textit{Carotene}, and \textit{Bilirubin}. These pigments, each with unique optical properties, contribute to the skin's overall coloration and appearance:
 
-\section{One}
-(Co-localization methods of auto-drawing bbox)
+\begin{itemize}
+    \item \textbf{Melanin} This is the primary determinant of skin color, providing shades from light to dark. Melanin absorbs across a broad range of the visible spectrum but particularly in the ultraviolet (UV) region. This absorption is crucial as it protects the skin from UV radiation damage. The concentration and distribution of melanin can vary widely among individuals, leading to a diversity of skin tones.
+    \item \textbf{Hemoglobin} Found in red blood cells, Hemoglobin gives blood its red color. The optical properties of Hemoglobin vary between its two forms: oxy-Hemoglobin (oxygen-rich) and deoxy-Hemoglobin (oxygen-poor). These forms have distinct absorption peaks in the visible spectrum, contributing to the reddish undertones of skin.
+    \item \textbf{Carotene and Bilirubin} These pigments impart a yellowish hue to the skin. They absorb light in the blue region of the spectrum, which complements the reds of Hemoglobin and the browns of melanin, contributing to the overall skin tone.
 
-\section{Two}
-(Propagate bbox by co-segmentation)
+\end{itemize}
 
-\section{Three}
+The formation of skin pigmentations, such as brown spots or red spots, is often associated with an overproduction or uneven distribution of skin chromophores. These pigmentations can result from various factors, including genetic predisposition, hormonal changes, sun exposure, and aging. In response to UV radiation, Melanocytes (melanin-producing cells) increase their production of melanin as a protective mechanism, which can lead to localized darkening of the skin.
+
+\section{Skin Modeling \& Rendering Techniques}
 (Suggesting images to users)
 
+\section{Controllable Facial Image Editing}
+
+% \section{Why physics-based modelling?}
+% In this section, we discuss why we prefer to use a physics-based modelling approach by comparing it with deep learning methods and addressing the limitations of the current data-driven-based approaches.
+
+\subsection{Objectives and Definitions}
+
+Learning-based methods aim to learn a projection from latent noise to pixels\cite{goodfellowGenerativeAdversarialNetworks2014,DBLP:conf/nips/HoJA20,DBLP:journals/corr/KingmaW13}. Once successfully trained, control over the generated image can be achieved by editing in their latent spaces\cite{DBLP:journals/corr/abs-1812-04948, DBLP:journals/corr/abs-1907-10786}. Additionally, achieving precise and controllable latent editing requires either encoding control parameters into the input noise, modelled as conditional generation\cite{isolaImagetoimageTranslationConditional2017}, or injecting controls into the forward pipeline, such as Low-Rank Adaption(LoRA)\cite{2021arXiv210609685H} or ControlNet\cite{2023arXiv230205543Z}, etc. These methods all require calibrated and labelled data with model fine-tuning to achieve accurate editing.
+
+Our physics-based modelling approach simulates the optical properties and physiological characteristics of the skin to model the relative distribution of localized skin chromophores. This is achieved through fitting the Sum-of-Gaussians. Our method allows skin-agnostic control over the shape, color, and size of local skin blemishes to simulate their degradation or deterioration process after fitting. Without extensive training data, our method is comparable in effect to deep learning models, with strong interpretability.
+
+\subsection{Dataset and Stability}
+
+Learning-based approaches are highly dependent on dataset quality. On small datasets, deep neural networks are often prone to over-fitting, showing similar generation patterns or binding certain features to another (e.g., binding specific skin tone to a gender, or certain age range). Additionally, if there are not enough samples reflecting continuous changes in the same subject, it becomes challenging for the model to learn a trajectory that fits reality.
+
+On one hand, recent high-resolution portrait datasets\cite{DBLP:journals/corr/abs-1812-04948} have been proposed, facilitating deep learning models to achieve great success in face image generation. However, they mostly focus on coarse, large-scale features (such as face shape, hairstyle, expression, etc.). On the other hand, datasets for skin texture rendering\cite{Bai_2023_CVPR} have been proposed. But they generally contain “flawless” skin with few real skin texture samples reflecting skin diseases or defects, and there are no corresponding annotations. To our knowledge, there is currently no dataset specifically dedicated to skin blemish generation or editing.
+
+\subsection{Controllability}
+We believe that image content editing methods can be broadly categorized into three classes: “Pixel Space,” “Latent Space,” and “Parameter Space.”
+\begin{itemize}
+    \item \textbf{Pixel Space}: Methods such as inpainting algorithms use neighboring or most similar pixels to fill blemish positions\cite{doi:10.1080/10867651.2004.10487596, bertalmio2001navier}. Then, they blend between the original and modified image (alpha blending). Although it can simply and directly control pigmentation intensity through the alpha parameter, the adjustment trajectory does not conform to reality, resulting in unnatural editing traces. They cannot achieve diverse modifications, like controlling melanin unchanged while only modifying haemoglobin concentration.
+
+    \item \textbf{Latent Space}: Latent space editing can achieve smooth and continuous content editing or style transfer, but the trajectory is unpredictable and entangled. Although decoupling features for isolated modification is feasible, it requires constraints during the learning session. These constraints are hard to define manually, while precise feature control relies on extensive annotated data.
+
+    \item \textbf{Parameter Space}: Our blemish simulation/editing, based on tuning fitted pigmentation model parameters, allows free and independent adjustments to the blemish's appearance, including color, position, shape, and size, without altering skin details. Experimental and survey data confirm that our algorithm's pigmentation modifications align with general human perception, yielding natural transformation.
+\end{itemize}
 
 %=== END OF CHAPTER TWO ===
 \end{spacing}
