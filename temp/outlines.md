@@ -79,3 +79,5 @@ Hemoglobin: Found in red blood cells, hemoglobin gives blood its red color. The 
 Carotene and Bilirubin: These pigments impart a yellowish hue to the skin. They absorb light in the blue region of the spectrum, which complements the reds of hemoglobin and the browns of melanin, contributing to the overall skin tone.
 
 The formation of skin pigmentations, such as brown spots or red spots, is often associated with an overproduction or uneven distribution of skin chromophores. These pigmentations can result from various factors, including genetic predisposition, hormonal changes, sun exposure, and aging. In response to UV radiation, melanocytes (melanin-producing cells) increase their production of melanin as a protective mechanism, which can lead to localized darkening of the skin.
+
+图 x 中我们展示了典型的几种皮肤色素的光谱吸收系数。两种血红素都在从400nm 到 450nm 以及 520nm 到 600nm 有较高的吸收系数，这使得皮肤呈现粉红色的外观。而黑色素对UV和蓝紫色有较为强烈的吸收，使得皮肤呈现棕色到黑色的外观。

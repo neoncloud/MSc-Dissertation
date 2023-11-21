@@ -1,0 +1,47 @@
+# 实验方面
+1. 实验结果与结论矛盾
+2. 缺少关键支撑
+3. poor discussion
+    R1-3-8/9/
+    R1-3-11
+
+    R2-3-1 (one less gaussian ? One more?  number of Gaussians to fit to approximately matches the number of chromophores? Why using gaussian to fit chromophore concentration)
+
+
+
+2. 写作
+2.1 不清晰的定义
+
+R1-3-1， R1-3-2 (FID, 补充解释为什么只用FID，SSID那种为什么不用)
+R1-3-4
+R2-3-2 (not include period of time)
+
+R3-3-2/3 (highlight X%)
+
+highlight fairness (for dark skintone)
+
+R3-3-4 (change a sample)
+R3-3-10 (COLOR Colour calibrated?)
+
+2.2 细节缺失
+R1-3-5 (unknown scale, ICA截断)
+R1-3-7 (EQUATION)
+2.3 Related works
+R1-3-3
+R1-3-12 (EXPLANATION)
+
+R2-3-3 (how to choose / tune  hyper parameters)
+
+R3-3-1 (lack of discussion to related works about modelling: other applications, and say they are not suitable to our application)
+R3-3-5/7/8 (Methods section presents one paper on physics based modelling that is selected from 2006. Hasn't there been any progress in the domain since? Related Works section should discuss and cover a greater survey of the SOTA in all the categories that resemble or have inspired this work. )
+(More recent methods. Or say why recent methods not suitable)
+R3-3-12 (WHY CHOOSE THOSE COMPETTING METHODS)
+
+R3-3-16 (OPEN DATASET?)
+
+2.4 Typor
+R1-3-6
+R3-3-6
+
+
+R4-3-1/2/3

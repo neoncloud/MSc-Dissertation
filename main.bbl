@@ -1,5 +1,12 @@
 \begin{thebibliography}{10}
 
+\bibitem{10.5555/2383894.2383946}
+Craig Donner and Henrik~Wann Jensen.
+\newblock A {S}pectral {BSSRDF} for {S}hading {H}uman {S}kin.
+\newblock In {\em Proceedings of the 17th Eurographics Conference on Rendering
+  Techniques}, EGSR '06, page 409–417, Goslar, DEU, 2006. Eurographics
+  Association.
+
 \bibitem{doi:10.2352/EI.2023.35.7.IMAGE-276}
 Ling Li, Bandara Dissanayake, Tatsuya Omotezako, Yunjie Zhong, Qing Zhang,
   Rizhao Cai, Qian Zheng, Dennis Sng, Weisi Lin, Yufei Wang, and Alex~C. Kot.
@@ -45,6 +52,24 @@ Jun{-}Yan Zhu, Taesung Park, Phillip Isola, and Alexei~A. Efros.
 Leon~A. Gatys, Alexander~S. Ecker, and Matthias Bethge.
 \newblock A neural algorithm of artistic style.
 \newblock {\em ArXiv preprint}, abs/1508.06576, 2015.
+
+\bibitem{alalufEthnicVariationMelanin2002a}
+Simon Alaluf, Derek Atkins, Karen Barrett, Margaret Blount, Nik Carter, and
+  Alan Heath.
+\newblock Ethnic {{Variation}} in {{Melanin Content}} and {{Composition}} in
+  {{Photoexposed}} and {{Photoprotected Human Skin}}.
+\newblock 15(2):112--118.
+
+\bibitem{doiSpectralEstimationHuman2003}
+Motonori Doi and Shoji Tominaga.
+\newblock Spectral estimation of human skin color using the {{Kubelka-Munk}}
+  theory.
+\newblock page 221.
+
+\bibitem{ANDERSON198113}
+R.~Rox Anderson and John~A. Parrish.
+\newblock The optics of human skin.
+\newblock {\em Journal of Investigative Dermatology}, 77(1):13--19, 1981.
 
 \bibitem{DBLP:journals/corr/KingmaW13}
 Diederik~P. Kingma and Max Welling.
