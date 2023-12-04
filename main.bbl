@@ -71,6 +71,60 @@ R.~Rox Anderson and John~A. Parrish.
 \newblock The optics of human skin.
 \newblock {\em Journal of Investigative Dermatology}, 77(1):13--19, 1981.
 
+\bibitem{Igarashi2005TheAO}
+Takanori Igarashi, Ko~Nishino, and Shree~K. Nayar.
+\newblock The appearance of human skin.
+\newblock 2005.
+
+\bibitem{10.1145/1198555.1198593}
+George Borshukov and J.~P. Lewis.
+\newblock Realistic human face rendering for "the matrix reloaded".
+\newblock In {\em ACM SIGGRAPH 2005 Courses}, SIGGRAPH '05, page 13–es, New
+  York, NY, USA, 2005. Association for Computing Machinery.
+
+\bibitem{2015ExtendingTD}
+Brent Burley.
+\newblock Extending the disney brdf to a bsdf with integrated subsurface
+  scattering.
+\newblock In {\em SIGGRAPH 2015 Course: Physically Based Shading in Theory and
+  Practice}, 2015.
+
+\bibitem{JIMENEZ2015_CGF}
+Jorge Jimenez, Károly Zsolnai, Adrian Jarabo, Christian Freude, Thomas
+  Auzinger, Xian-Chun Wu, Javier von~der Pahlen, Michael Wimmer, and Diego
+  Gutierrez.
+\newblock Separable subsurface scattering.
+\newblock {\em Computer Graphics Forum}, 2015.
+
+\bibitem{wrenninge2017path}
+Magnus Wrenninge, Ryusuke Villemin, and Christophe Hery.
+\newblock Path traced subsurface scattering using anisotropic phase functions
+  and non-exponential free flights.
+\newblock In {\em Tech. Rep.} Pixar Inc., 2017.
+
+\bibitem{chiang2016practical}
+Matt Jen-Yuan Chiang, Peter Kutz, and Brent Burley.
+\newblock Practical and controllable subsurface scattering for production path
+  tracing.
+\newblock In {\em ACM SIGGRAPH 2016 Talks}, pages 1--2. 2016.
+
+\bibitem{10.1145/3596711.3596747}
+Henrik Wann~Jensen, Stephen~R. Marschner, Marc Levoy, and Pat Hanrahan.
+\newblock {\em A Practical Model for Subsurface Light Transport}.
+\newblock Association for Computing Machinery, New York, NY, USA, 1 edition,
+  2023.
+
+\bibitem{d2007efficient}
+Eugene d'Eon, David Luebke, and Eric Enderton.
+\newblock Efficient rendering of human skin.
+\newblock In {\em Proceedings of the 18th Eurographics conference on Rendering
+  Techniques}, pages 147--157, 2007.
+
+\bibitem{10.1145/1073204.1073308}
+Craig Donner and Henrik~Wann Jensen.
+\newblock Light diffusion in multi-layered translucent materials.
+\newblock {\em ACM Trans. Graph.}, 24(3):1032–1039, 2005.
+
 \bibitem{DBLP:journals/corr/KingmaW13}
 Diederik~P. Kingma and Max Welling.
 \newblock Auto-encoding variational bayes.
@@ -131,5 +185,33 @@ Marcelo Bertalmio, Andrea~L Bertozzi, and Guillermo Sapiro.
 \newblock In {\em Proceedings of the 2001 IEEE Computer Society Conference on
   Computer Vision and Pattern Recognition. CVPR 2001}, volume~1, pages I--I.
   IEEE, 2001.
+
+\bibitem{tsumura1999independent}
+Norimichi Tsumura, Hideaki Haneishi, and Yoichi Miyake.
+\newblock Independent-component analysis of skin color image.
+\newblock {\em JOSA A}, 16(9):2169--2176, 1999.
+
+\bibitem{HYVARINEN2000411}
+A.~Hyvärinen and E.~Oja.
+\newblock Independent component analysis: algorithms and applications.
+\newblock {\em Neural Networks}, 13(4):411--430, 2000.
+
+\bibitem{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
+
+\bibitem{10.1007/BFb0067700}
+Jorge~J. Mor{\'e}.
+\newblock The levenberg-marquardt algorithm: Implementation and theory.
+\newblock In G.~A. Watson, editor, {\em Numerical Analysis}, pages 105--116,
+  Berlin, Heidelberg, 1978. Springer Berlin Heidelberg.
+
+\bibitem{newville_matthew_2014_11813}
+Matthew Newville, Till Stensitzki, Daniel~B. Allen, and Antonino Ingargiola.
+\newblock {LMFIT: Non-Linear Least-Square Minimization and Curve-Fitting for
+  Python}, 2014.
 
 \end{thebibliography}

@@ -11,6 +11,12 @@ In this chapter, we first review the definition and physiologic features of skin
 % , and discuss why we prefer to use a physics-based modelling approach by comparing it with deep learning methods and addressing the limitations of the current data-driven-based approaches.
 % 研究对象
 \section{Skin Chromophores \& Pigmentation}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{Chapter2/HM_abs.png}
+    \caption{Spectral absorption coefficients of skin chromophore. We focused on modelling heamoglobin and melanin distribution of skin pigmentation. Image taken from\cite{10.5555/2383894.2383946}}.
+    \label{fig:hm_abs}
+\end{figure}
 
 What gives our skin its diverse colors? When light is transmitted into the skin, energy of different wavelengths is selectively absorbed by the chromophores, scattered by the skin tissues and then observed by us and rendered in unique colors. The color of human skin and skin pigmentations is primarily influenced by several key chromophores, namely \textit{Melanin}, \textit{Hemoglobin}, \textit{Carotene}, and \textit{Bilirubin}. These pigments, each with unique optical properties, contribute to the skin's overall coloration and appearance:
 
@@ -20,19 +26,33 @@ What gives our skin its diverse colors? When light is transmitted into the skin,
     \item \textbf{Carotene and Bilirubin} These pigments impart a yellowish hue to the skin. They absorb light in the blue region of the spectrum, which complements the reds of Hemoglobin and the browns of melanin, contributing to the overall skin tone\cite{ANDERSON198113}.
 \end{itemize}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\columnwidth]{Chapter2/HM_abs.png}
-    \caption{Spectral absorption coefficients of skin chromophore. We focused on modelling heamoglobin and melanin distribution of skin pigmentation. Image taken from\cite{10.5555/2383894.2383946}}.
-    \label{fig:hm_abs}
-\end{figure}
 
 In this work we mainly consider hemoglobin and melanin in the skin. For the other chromophores and their appearance, we use them as residual terms. In Figure\ref{fig:hm_abs} we show the spectral absorption coefficients of these two key chromophores. Both types of hemoglobin have high absorption coefficients from 400nm to 450nm and from 520nm to 600nm, which gives the skin a pink color appearance. Melanin, on the other hand, absorbs UV and blue-violet more strongly, giving the skin a brown to black appearance.
 
 The formation of skin pigmentations, such as brown spots or red spots, is often associated with an overproduction or uneven distribution of skin chromophores. These pigmentations can result from various factors, including genetic predisposition, hormonal changes, sun exposure, and aging. In response to UV radiation, Melanocytes (melanin-producing cells) increase their production of melanin as a protective mechanism, which can lead to localized darkening of the skin.
 
 \section{Skin Modeling \& Rendering Techniques}
-(Suggesting images to users)
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{Chapter2/skin_model2.pdf}
+    \caption{Layered skin model. A portion of the incident light undergoes specular reflection, revealed as a skin texture layer. The other part transmits into and is scattered by the Epidermis and Dermis. Melanin and haemoglobin, which are distributed in these two layers, absorb specific wavelengths of light, rendering the skin's characteristic color.}
+    \label{fig:skin_model}
+\end{figure}
+
+Modelling skin as a layered, semi-transparent material has become common practice in studying the optical properties of skin and realistic skin rendering\cite{10.5555/2383894.2383946}. In this model, the interactions of light with the skin can be thought of as combinations of the following:
+
+\begin{enumerate}
+    \item \textbf{Specular reflection:} Light reflection from the surface, caused by oils, water, and stratum corneum of the skin. It captures the surface texture of the skin, such as fine grooves and textures. Our proposed method preserves these details unaltered.
+    \item \textbf{Subsurface scattering and absorption:} Physiologically, skin is semi-transparent\cite{Igarashi2005TheAO}. Skin constituents such as extra-cellular matrix cause random deflections of incoming light rays, some of which are reflected back to the surface and are observed. This phenomenon is called subsurface scattering. In addition, the chromophore components present in the epidermis and dermis layers, such as melanin and heamoglobin, selectively absorb light propagating in the skin, thus rendering the unique hue of human skin. When chromophore is locally accumulated, it will render a blemish where the color is different from the surrounding skin\cite{ANDERSON198113}. Our method emphasizes this unique optical phenomenon to achieve realistic pigmentation modelling and editing.
+    \item \textbf{Transmission:} When the light is very strong and shines on thin tissue (such as the ears or fingers under strong light), a unique transmission appearance can be observed against the light source. For our blemish change modelling, we disregard this.
+\end{enumerate}
+
+Despite the multilayer skin model describing the unique appearance resulting from skin optical properties well and conforming to the physiological structure of real skin, rendering realistic skin images on a computer has been challenging. 
+
+Thanks to advancements in modern graphics hardware and developments in computer graphics, we can now achieve realistic skin rendering\cite{10.1145/1198555.1198593, 2015ExtendingTD, JIMENEZ2015_CGF}. The key lies in achieving an accurate and efficient simulation of the subsurface scattering behavior of the skin. Although ray tracing and path tracing\cite{wrenninge2017path, chiang2016practical} are regarded as some of the most realistic approximations for the behaviors of light rays, these methods often require massive computations and can be difficult to apply to real-time scenarios, so approximate fast algorithms become the primary consideration. Jensen et al.\cite{10.1145/3596711.3596747} proposed the Bidirectional Surface Scattering Reflectance Distribution Function (BSSRDF) to approximate the light transmission function. Based on their observations and assumptions, in highly scattering media, light scattering tends to be isotropic, so the scattering distribution is only related to the distance from the incident point. Based on this assumption, Eugene et al.\cite{d2007efficient}proposed using a diffusion profile to describe this scattering distribution, thereby achieving efficient and realistic skin rendering. However, it is still challenging to accurately simulate the scattering of the multilayer skin model. Fortunately, Jensen et al.\cite{10.1145/1073204.1073308} pointed out that using the sum of 4 or more Gaussian functions to approximate the diffusion profile of the multi-layer skin model has been proven to be very effective in practice. Moreover, they calculated a set of well-fitted parameters and successfully simulated the diffusion distribution of the multi-layer skin model in the RGB domain.
+
+These methods have inspired this work to take into account the optical properties of the skin in the algorithm, thus achieving realistic blemish simulation.
 
 \section{Controllable Facial Image Editing}
 
