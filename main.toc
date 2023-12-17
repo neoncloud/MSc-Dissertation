@@ -28,7 +28,7 @@
 \contentsline {chapter}{\numberline {5}Result \& Discussion}{24}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Versatility}{24}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Reality}{25}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Controllability}{29}{section.5.3}%
+\contentsline {section}{\numberline {5.3}Controllability}{28}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Perception Study}{29}{section.5.4}%
 \contentsline {chapter}{\numberline {6}Conclusion}{31}{chapter.6}%
 \contentsline {chapter}{References}{33}{chapter*.21}%

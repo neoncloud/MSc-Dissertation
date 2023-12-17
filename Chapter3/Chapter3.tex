@@ -53,7 +53,7 @@ Following the practice of Tsumura et al.\cite{tsumura1999independent}, $E$ is es
 \end{equation}
 
 \section{Spot Appearance Modelling Based on Sum-of-Gaussians}
-The method is based on the observation that pigmentation and acne of interest tend to have blurred edges. On one hand, they are caused by local accumulation of chromophores under the skin due to various stressors such as UV or inflammation, which can be modeled as Gaussian distributions. On the other hand, subsurface scattering of light under the skin makes pigmentation look even blurry. With Gaussian functions, both phenomena can be described very well, because the convolution of two Gaussian functions is still a Gaussian function, namely:
+The proposed method is based on the observation that pigmentation and acne of interest tend to have blurred edges. On one hand, they are caused by local accumulation of chromophores under the skin due to various stressors such as UV or inflammation, which can be modeled as Gaussian distributions. On the other hand, subsurface scattering of light under the skin makes pigmentation look even blurry. With Gaussian functions, both phenomena can be described very well, because the convolution of two Gaussian functions is still a Gaussian function, namely:
 \begin{equation}
     \begin{aligned}
          & G(x; \mu_a, \sigma_a, A)\star G(x; \mu_b, \sigma_b, B)                 \\
