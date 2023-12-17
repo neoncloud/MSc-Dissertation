@@ -7,7 +7,6 @@ A level-1 auxiliary file: Title/SoO.aux
 A level-1 auxiliary file: Title/SDS.aux
 A level-1 auxiliary file: Title/AAS.aux
 A level-1 auxiliary file: Front/Abstract.aux
-A level-1 auxiliary file: Front/Acknowledgement.aux
 A level-1 auxiliary file: Front/Acronyms.aux
 A level-1 auxiliary file: Front/Symbols.aux
 A level-1 auxiliary file: Chapter1/Chapter1.aux
@@ -21,6 +20,8 @@ A level-1 auxiliary file: Appendix/appendix.aux
 Database file #1: Ref/References.bib
 Warning--entry type for "newville_matthew_2014_11813" isn't style-file defined
 --line 415 of file Ref/References.bib
+Warning--entry type for "adobephotoshop" isn't style-file defined
+--line 429 of file Ref/References.bib
 Warning--empty journal in goodfellowGenerativeAdversarialNetworks2014
 Warning--empty year in goodfellowGenerativeAdversarialNetworks2014
 Warning--empty journal in alalufEthnicVariationMelanin2002a
@@ -30,45 +31,45 @@ Warning--empty year in doiSpectralEstimationHuman2003
 Warning--empty booktitle in Igarashi2005TheAO
 Warning--empty publisher in chiang2016practical
 Warning--empty chapter and pages in 10.1145/3596711.3596747
-You've used 34 entries,
+You've used 36 entries,
             1791 wiz_defined-function locations,
-            681 strings with 11886 characters,
-and the built_in function-call counts, 9509 in all, are:
-= -- 812
-> -- 505
-< -- 12
-+ -- 179
-- -- 145
-* -- 614
-:= -- 1438
-add.period$ -- 111
-call.type$ -- 34
-change.case$ -- 34
+            689 strings with 12236 characters,
+and the built_in function-call counts, 10072 in all, are:
+= -- 865
+> -- 526
+< -- 13
++ -- 187
+- -- 151
+* -- 641
+:= -- 1512
+add.period$ -- 117
+call.type$ -- 36
+change.case$ -- 36
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 466
-empty$ -- 908
-format.name$ -- 145
-if$ -- 2201
+cite$ -- 45
+duplicate$ -- 494
+empty$ -- 967
+format.name$ -- 151
+if$ -- 2339
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 33
-newline$ -- 170
-num.names$ -- 40
-pop$ -- 157
+int.to.str$ -- 36
+missing$ -- 34
+newline$ -- 179
+num.names$ -- 42
+pop$ -- 167
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 259
+skip$ -- 284
 stack$ -- 0
-substring$ -- 506
-swap$ -- 158
-text.length$ -- 12
+substring$ -- 546
+swap$ -- 172
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 9
-while$ -- 77
-width$ -- 36
-write$ -- 370
-(There were 10 warnings)
+while$ -- 82
+width$ -- 38
+write$ -- 389
+(There were 11 warnings)

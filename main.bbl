@@ -7,6 +7,15 @@ Craig Donner and Henrik~Wann Jensen.
   Techniques}, EGSR '06, page 409–417, Goslar, DEU, 2006. Eurographics
   Association.
 
+\bibitem{adobephotoshop}
+{Adobe Inc.}
+\newblock Adobe photoshop.
+
+\bibitem{rombach2021highresolution}
+Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Björn
+  Ommer.
+\newblock High-resolution image synthesis with latent diffusion models, 2021.
+
 \bibitem{doi:10.2352/EI.2023.35.7.IMAGE-276}
 Ling Li, Bandara Dissanayake, Tatsuya Omotezako, Yunjie Zhong, Qing Zhang,
   Rizhao Cai, Qian Zheng, Dennis Sng, Weisi Lin, Yufei Wang, and Alex~C. Kot.
@@ -27,11 +36,6 @@ Jonathan Ho, Ajay Jain, and Pieter Abbeel.
   Neural Information Processing Systems 33: Annual Conference on Neural
   Information Processing Systems 2020, NeurIPS 2020, December 6-12, 2020,
   virtual}, 2020.
-
-\bibitem{rombach2021highresolution}
-Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Björn
-  Ommer.
-\newblock High-resolution image synthesis with latent diffusion models, 2021.
 
 \bibitem{DBLP:conf/iclr/DumoulinSK17}
 Vincent Dumoulin, Jonathon Shlens, and Manjunath Kudlur.
@@ -213,5 +217,13 @@ Jorge~J. Mor{\'e}.
 Matthew Newville, Till Stensitzki, Daniel~B. Allen, and Antonino Ingargiola.
 \newblock {LMFIT: Non-Linear Least-Square Minimization and Curve-Fitting for
   Python}, 2014.
+
+\bibitem{DBLP:conf/cvpr/SzegedyVISW16}
+Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, and
+  Zbigniew Wojna.
+\newblock Rethinking the inception architecture for computer vision.
+\newblock In {\em 2016 {IEEE} Conference on Computer Vision and Pattern
+  Recognition, {CVPR} 2016, Las Vegas, NV, USA, June 27-30, 2016}, pages
+  2818--2826. {IEEE} Computer Society, 2016.
 
 \end{thebibliography}

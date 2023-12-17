@@ -52,7 +52,7 @@ Following the practice of Tsumura et al.\cite{tsumura1999independent}, we estima
     \end{bmatrix}
 \end{equation}
 
-\section{Skin Chromophore distribution Modelling Based on Sum-of-Gaussians}
+\section{Spot Appearance Modelling Based on Sum-of-Gaussians}
 Our method is based on the observation that pigmentation and acne of interest tend to have blurred edges. On the one hand, they are caused by local accumulation of chromophores under the skin due to various stressors such as UV or inflammation, which can be modeled as Gaussian distributions. On the other hand, subsurface scattering of light under the skin makes pigmentation look even blurry. With Gaussian functions, we can describe both phenomena very well, because the convolution of two Gaussian functions is still a Gaussian function, namely:
 \begin{equation}
     \begin{aligned}
@@ -136,7 +136,7 @@ This algorithm can be represented by the following pseudocode.
         \State Unfreeze all parameters for final refinement fit
     \EndFor
     
-    \State \textbf{Return:} Fitted parameters and fitted color spot image
+    \State \textbf{Return:} Fitted parameters and fitted spot image
     
     \end{algorithmic}
     \end{algorithm}

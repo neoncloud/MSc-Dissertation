@@ -1,9 +1,8 @@
 \contentsline {chapter}{Abstract}{iii}{chapter*.3}%
-\contentsline {chapter}{Acknowledgement}{iv}{chapter*.4}%
-\contentsline {chapter}{Acronyms}{v}{chapter*.5}%
-\contentsline {chapter}{Symbols}{vi}{chapter*.7}%
-\contentsline {chapter}{Lists of Figures}{vii}{chapter*.9}%
-\contentsline {chapter}{Lists of Tables}{viii}{chapter*.10}%
+\contentsline {chapter}{Acronyms}{iv}{chapter*.4}%
+\contentsline {chapter}{Symbols}{v}{chapter*.6}%
+\contentsline {chapter}{Lists of Figures}{vii}{chapter*.8}%
+\contentsline {chapter}{Lists of Tables}{viii}{chapter*.9}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Motivation}{2}{section.1.2}%
@@ -19,22 +18,19 @@
 \contentsline {subsection}{\numberline {2.3.3}Controllability}{12}{subsection.2.3.3}%
 \contentsline {chapter}{\numberline {3}Methods}{14}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Skin Chromophore Color Space Decomposition}{14}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Skin Chromophore distribution Modelling Based on Sum-of-Gaussians}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Spot Appearance Modelling Based on Sum-of-Gaussians}{16}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Algorithm Implementations}{18}{subsection.3.2.1}%
-\contentsline {chapter}{\numberline {4}Test and Experiments}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}One}{20}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Two}{20}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Three}{20}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Discussion}{21}{chapter.5}%
-\contentsline {section}{\numberline {5.1}One}{21}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Two}{21}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Three}{21}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Conclusion and Recommendations}{22}{chapter.6}%
-\contentsline {section}{\numberline {6.1}One}{22}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Two}{22}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Three}{23}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Four}{23}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Six}{23}{subsection.6.4.1}%
-\contentsline {chapter}{References}{24}{chapter*.14}%
-\contentsline {chapter}{Appendix \numberline {A}Introduction of Appendix}{29}{appendix.a.A}%
-\contentsline {chapter}{Appendix \numberline {B}Sample Code}{30}{appendix.a.B}%
+\contentsline {chapter}{\numberline {4}Experiments}{20}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Dataset}{20}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Experiment Setup}{21}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Objective Evaluation}{21}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Subjective Evaluation}{22}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {5}Result \& Discussion}{24}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Versatility}{24}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Reality}{25}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Controllability}{29}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Perception Study}{29}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusion}{31}{chapter.6}%
+\contentsline {chapter}{References}{33}{chapter*.21}%
+\contentsline {chapter}{Appendix \numberline {A}Introduction of Appendix}{38}{appendix.a.A}%
+\contentsline {chapter}{Appendix \numberline {B}Sample Code}{39}{appendix.a.B}%
