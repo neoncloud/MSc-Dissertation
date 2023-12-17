@@ -151,13 +151,6 @@ Yujun Shen, Jinjin Gu, Xiaoou Tang, and Bolei Zhou.
   Recognition, {CVPR} 2020, Seattle, WA, USA, June 13-19, 2020}, pages
   9240--9249. {IEEE}, 2020.
 
-\bibitem{isolaImagetoimageTranslationConditional2017}
-Phillip Isola, Jun{-}Yan Zhu, Tinghui Zhou, and Alexei~A. Efros.
-\newblock Image-to-image translation with conditional adversarial networks.
-\newblock In {\em 2017 {IEEE} Conference on Computer Vision and Pattern
-  Recognition, {CVPR} 2017, Honolulu, HI, USA, July 21-26, 2017}, pages
-  5967--5976. {IEEE} Computer Society, 2017.
-
 \bibitem{2021arXiv210609685H}
 Edward~J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen{-}Zhu, Yuanzhi Li,
   Shean Wang, Lu~Wang, and Weizhu Chen.
@@ -178,10 +171,11 @@ Haoran Bai, Di~Kang, Haoxian Zhang, Jinshan Pan, and Linchao Bao.
 \newblock In {\em IEEE Conference on Computer Vision and Pattern Recognition},
   2023.
 
-\bibitem{doi:10.1080/10867651.2004.10487596}
-Alexandru Telea.
-\newblock An image inpainting technique based on the fast marching method.
-\newblock {\em Journal of Graphics Tools}, 9(1):23--34, 2004.
+\bibitem{beharaSkinLesionSynthesis2023}
+Kavita Behara, Ernest Bhero, and John~Terhile Agee.
+\newblock Skin {{Lesion Synthesis}} and {{Classification Using}} an {{Improved
+  DCGAN Classifier}}.
+\newblock 13(16):2635.
 
 \bibitem{bertalmio2001navier}
 Marcelo Bertalmio, Andrea~L Bertozzi, and Guillermo Sapiro.
@@ -189,6 +183,67 @@ Marcelo Bertalmio, Andrea~L Bertozzi, and Guillermo Sapiro.
 \newblock In {\em Proceedings of the 2001 IEEE Computer Society Conference on
   Computer Vision and Pattern Recognition. CVPR 2001}, volume~1, pages I--I.
   IEEE, 2001.
+
+\bibitem{lipowezkyAutomaticFrecklesDetection2008}
+Uri Lipowezky and Sarah Cahen.
+\newblock Automatic freckles detection and retouching.
+\newblock In {\em 2008 {{IEEE}} 25th {{Convention}} of {{Electrical}} and
+  {{Electronics Engineers}} in {{Israel}}}, pages 142--146.
+
+\bibitem{Liu2017AutomaticFF}
+Xin Liu, Lu~Xie, Bineng Zhong, Jixiang Du, and Qinmu Peng.
+\newblock Automatic facial flaw detection and retouching via discriminative
+  structure tensor.
+\newblock {\em IET Image Process.}, 11:1068--1076, 2017.
+
+\bibitem{velusamyFabSoftenFaceBeautification2020}
+Sudha Velusamy, Rishubh Parihar, Raviprasad Kini, and Aniket Rege.
+\newblock {{FabSoften}}: {{Face Beautification}} via {{Dynamic Skin
+  Smoothing}}, {{Guided Feathering}}, and {{Texture Restoration}}.
+\newblock In {\em 2020 {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and
+  {{Pattern Recognition Workshops}} ({{CVPRW}})}, pages 2248--2256. {IEEE}.
+
+\bibitem{heGuidedImageFiltering2010}
+Kaiming He, Jian Sun, and Xiaoou Tang.
+\newblock Guided {{Image Filtering}}.
+\newblock In Kostas Daniilidis, Petros Maragos, and Nikos Paragios, editors,
+  {\em Computer {{Vision}} – {{ECCV}} 2010}, Lecture {{Notes}} in {{Computer
+  Science}}, pages 1--14. {Springer}.
+
+\bibitem{xieBlemishawareProgressiveFace2023}
+Lianxin Xie, Wen Xue, Zhen Xu, Si~Wu, Zhiwen Yu, and Hau~San Wong.
+\newblock Blemish-aware and {{Progressive Face Retouching}} with {{Limited
+  Paired Data}}.
+\newblock In {\em 2023 {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and
+  {{Pattern Recognition}} ({{CVPR}})}, pages 5599--5608. {IEEE}.
+
+\bibitem{liuAutomaticBeautificationGroupPhoto2018}
+Ji~Liu, Shuai Li, Wenfeng Song, Liang Liu, Hong Qin, and Aimin Hao.
+\newblock Automatic {{Beautification}} for {{Group-Photo Facial Expressions
+  Using Novel Bayesian GANs}}.
+\newblock In {\em Artificial {{Neural Networks}} and {{Machine Learning}} –
+  {{ICANN}} 2018}, Lecture {{Notes}} in {{Computer Science}}, pages 760--770.
+  {Springer International Publishing}.
+
+\bibitem{jungDeepLearningbasedOptical2023a}
+Geunho Jung, Semin Kim, Jongha Lee, and Sangwook Yoo.
+\newblock Deep learning-based optical approach for skin analysis of melanin and
+  hemoglobin distribution.
+\newblock 28(3):035001.
+
+\bibitem{tsumuraImagebasedSkinColor}
+Norimichi Tsumura, Nobutoshi Ojima, Kayoko Sato, Mitsuhiro Shiraishi, Hideto
+  Shimizu, Hirohide Nabeshima, Syuuichi Akazaki, Kimihiko Hori, and Yoichi
+  Miyake.
+\newblock Image-based skin color and texture analysis/synthesis by extracting
+  hemoglobin and melanin information in the skin.
+\newblock page~10.
+
+\bibitem{linExemplarbasedFreckleRetouching2019}
+Tsung-Ying Lin, Yu-Ting Tsai, Tsung-Shian Huang, Wen-Chieh Lin, and Jung-Hong
+  Chuang.
+\newblock Exemplar-based freckle retouching and skin tone adjustment.
+\newblock 78:54--63.
 
 \bibitem{tsumura1999independent}
 Norimichi Tsumura, Hideaki Haneishi, and Yoichi Miyake.
