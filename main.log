@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.6)  17 DEC 2023 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.6)  17 DEC 2023 16:18
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -793,6 +793,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
 
 ]) (./main.lof
+Overfull \hbox (22.79234pt too wide) in paragraph at lines 6--6
+ [][] [][]\OT1/ptm/m/n/12 An overview of the pro-posed skin blem-ish change sim-u-la-tion pipeline. 
+ []
+
+
 Overfull \hbox (6.79584pt too wide) in paragraph at lines 10--10
  \OT1/ptm/m/n/12 Ar-rows are man-u-ally added to high-light blem-ishes of in-ter-est (acne 
  []
@@ -892,8 +897,13 @@ Overfull \hbox (0.78316pt too wide) in paragraph at lines 61--62
  (./Chapter3/Chapter3.tex
 Chapter 3.
 
-Overfull \hbox (4.27606pt too wide) in paragraph at lines 11--12
-\OT1/ptm/m/n/12 the unique chro-mophore con-tained in the skin, such as melanin and heamoglobin,
+Overfull \hbox (26.22397pt too wide) in paragraph at lines 11--12
+\OT1/ptm/m/n/12 due to unique chro-mophores con-tained in the skin, such as melanin and heamoglobin,
+ []
+
+
+Overfull \hbox (26.41599pt too wide) in paragraph at lines 20--21
+[]\OT1/ptm/m/n/12 In this work, the im-pact of two chro-mophores on the skin, melanin and heamoglobin,
  []
 
 [14
@@ -911,11 +921,6 @@ Overfull \hbox (36.90088pt too wide) in paragraph at lines 55--55
  []
 
 [16]
-Overfull \hbox (8.51244pt too wide) in paragraph at lines 88--89
-[]\OT1/ptm/m/n/12 We fit those pa-ram-e-ters by Levenberg-Marquardt method [[]34[]] with \OT1/pcr/m/n/12 lmfit \OT1/ptm/m/n/12 Python
- []
-
-
 
 pdfTeX warning: pdflatex.exe (file ./Chapter3/system.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
 <Chapter3/system.pdf, id=584, 1905.0637pt x 540.91385pt>
@@ -924,9 +929,13 @@ File: Chapter3/system.pdf Graphic file (type pdf)
 Package pdftex.def Info: Chapter3/system.pdf  used on input line 98.
 (pdftex.def)             Requested size: 387.81207pt x 110.11221pt.
 [17] [18 <./Chapter3/system.pdf>]
+Overfull \hbox (3.2545pt too wide) in paragraph at lines 112--113
+\OT1/ptm/m/n/12 where a new $\OML/ztmcm/m/it/12 N$\OT1/ptm/m/n/12 -th Gaus-sian func-tion is grad-u-ally in-tro-duced into the model
+ []
+
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 117.
 LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 128.
- (d:/texlive/2022/texmf-dist/tex/latex/psnfss/omsptm.fd
+(d:/texlive/2022/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
@@ -1083,13 +1092,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  18707 strings out of 478268
  330606 string characters out of 5850346
- 750675 words of memory out of 5000000
+ 750684 words of memory out of 5000000
  36270 multiletter control sequences out of 15000+600000
  512125 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,14n,117p,1923b,722s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {d:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (52 pages, 9131376 bytes).
+Output written on main.pdf (52 pages, 9131389 bytes).
 PDF statistics:
  1482 PDF objects out of 1728 (max. 8388607)
  1031 compressed objects within 11 object streams

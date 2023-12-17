@@ -8,23 +8,23 @@
 
 
 \section{Skin Chromophore Color Space Decomposition}
-In digital photos, skin color is just a small subset of the sRGB space, due to the unique chromophore contained in the skin, such as melanin and heamoglobin, which give the skin a unique and limited color. However, to find a transformation from sRGB values to the absolute concentration of skin chromophores is difficult, since sRGB color space is device-agnostic. It also requires calibrating the camera system using pigmentation data in vivo. We bypass this issue by modelling the \textit{relative} pigment concentration against the base skin so that the transformed color space can well express the influence of different chromophores on skin color without the need for camera system calibration.
+In digital photos, skin color represents only a small subset of the sRGB space, due to unique chromophores contained in the skin, such as melanin and heamoglobin, which give the skin a unique and limited color range. However, finding a transformation from sRGB values to the absolute concentration of skin chromophores is challenging, as the sRGB color space is device-agnostic. It also requires calibrating the camera system using pigmentation data in vivo. This issue is bypassed by modeling the \textit{relative} pigment concentration against the base skin, so that the transformed color space can well express the influence of different chromophores on skin color without the need for camera system calibration.
 
-Specifically, the relative absorption of incident light by the chromophore can be described by Beer-Lambert law, namely:
+Specifically, the relative absorption of incident light by the chromophore can be described by the Beer-Lambert law, namely:
 \begin{equation}
     A(\lambda) = -log(R(\lambda)) = C\epsilon l,
     \label{eq1}
 \end{equation}
 where $A$ represents absorption, $R$ is the reflection intensity, $\lambda$ is the wavelengths, $C$ is the relative concentration, $\epsilon$ denotes the extinction coefficient of chromophore and $l$ is the mean optical path length.
 
-In our work, we mainly consider the impact of two chromophores on the skin, melanin, heamoglobin, and a residual term, as shown in Figure \ref{fig:skin_model}. Therefore,
+In this work, the impact of two chromophores on the skin, melanin and heamoglobin, and a residual term, are mainly considered, as shown in Figure \ref{fig:skin_model}. Therefore,
 \begin{equation}
     A(\lambda) = C_H\epsilon_H(\lambda)l_H + C_M\epsilon_M(\lambda)l_M + C_r\epsilon_r(\lambda)l_r,
     \label{eq2}
 \end{equation}
-where subscript $H$, $M$, and $r$ represent heamoglobin, melanin and residual chromophore, respectively.
+where subscript $H$, $M$, and $r$ represent heamoglobin, melanin, and residual chromophore, respectively.
 
-In our method, we use log-RGB values as the approximation of real reflection intensity $R$. Although pixel intensity does not fully reflect the real case, it is sufficient for us to estimate the pigment concentration ratio of pigmentations relative to base skin. Considering the response of each chromophore under the three camera pixel channels R, G, and B, Equations \ref{eq1} and \ref{eq2} can be written as:
+In this method, log-RGB values are used as the approximation of real reflection intensity $R$. Although pixel intensity does not fully reflect the real case, it is sufficient to estimate the pigment concentration ratio of pigmentations relative to base skin. Considering the response of each chromophore under the three camera pixel channels R, G, and B, Equations \ref{eq1} and \ref{eq2} can be written as:
 \begin{equation}
     \begin{aligned}
          & C_H\epsilon_H^c l_H + C_M\epsilon_M^c l_M + C_r\epsilon_r^c l_r = -log(R^c) \\
@@ -43,7 +43,7 @@ or in matrix form
     \mathbf{k}=\begin{bmatrix}R^\mathcal{R} \\R^\mathcal{G} \\R^\mathcal{B}\end{bmatrix}.
 \end{gather*}
 
-Following the practice of Tsumura et al.\cite{tsumura1999independent}, we estimate $E$ by Fast Independent Component Analysis(FastICA)\cite{HYVARINEN2000411} in the log-RGB domain. Specifically, we randomly sample 128 patches from each face skin image of the dataset, and each patch is 16x16 pixels in size. Then the average RGB value of each patch is calculated. We adopted the FastICA algorithm in \texttt{sklearn}\cite{scikit-learn} to estimate the 3 independent components over the log-RGB domain as $\mathbf{E}$. In this work, we obtained $\hat{\mathbf{E}}$ as follows:
+Following the practice of Tsumura et al.\cite{tsumura1999independent}, $E$ is estimated by Fast Independent Component Analysis(FastICA)\cite{HYVARINEN2000411} in the log-RGB domain. Specifically, 128 patches are randomly sampled from each face skin image of the dataset, and each patch is 16x16 pixels in size. Then the average RGB value of each patch is calculated. The FastICA algorithm in \texttt{sklearn}\cite{scikit-learn} is adopted to estimate the 3 independent components over the log-RGB domain as $\mathbf{E}$. In this work, $\hat{\mathbf{E}}$ is obtained as follows:
 \begin{equation}
     \hat{\mathbf{E}} = \begin{bmatrix}
         0.96  & -0.63 & 0.9  \\
@@ -53,20 +53,20 @@ Following the practice of Tsumura et al.\cite{tsumura1999independent}, we estima
 \end{equation}
 
 \section{Spot Appearance Modelling Based on Sum-of-Gaussians}
-Our method is based on the observation that pigmentation and acne of interest tend to have blurred edges. On the one hand, they are caused by local accumulation of chromophores under the skin due to various stressors such as UV or inflammation, which can be modeled as Gaussian distributions. On the other hand, subsurface scattering of light under the skin makes pigmentation look even blurry. With Gaussian functions, we can describe both phenomena very well, because the convolution of two Gaussian functions is still a Gaussian function, namely:
+The method is based on the observation that pigmentation and acne of interest tend to have blurred edges. On one hand, they are caused by local accumulation of chromophores under the skin due to various stressors such as UV or inflammation, which can be modeled as Gaussian distributions. On the other hand, subsurface scattering of light under the skin makes pigmentation look even blurry. With Gaussian functions, both phenomena can be described very well, because the convolution of two Gaussian functions is still a Gaussian function, namely:
 \begin{equation}
     \begin{aligned}
          & G(x; \mu_a, \sigma_a, A)\star G(x; \mu_b, \sigma_b, B)                 \\
          & \qquad= A\cdot B\cdot G(x; \mu_a+\mu_b, \sqrt{\sigma_a^2+\sigma_b^2}),
     \end{aligned}
 \end{equation}
-where $\star$ is convolution operator, and Gaussian function $G$ is defined as
+where $\star$ is the convolution operator, and Gaussian function $G$ is defined as
 \begin{equation}
     G(x; \mu, \sigma, A) = \frac{A}{\sigma\sqrt{2\pi}}e^{-\frac{{(x - \mu)^2}}{{2\sigma^2}}},
 \end{equation}
 and this conclusion can also be generalized to multivariate Gaussian functions.
 
-We follow existing fast subsurface scattering implementations, using multiple Gaussian functions to approximate the appearance of a blemish under the scattering skin tissue. First, we defined a generalized 2D Gaussian function as
+Existing fast subsurface scattering implementations are followed, using multiple Gaussian functions to approximate the appearance of a blemish under the scattering skin tissue. First, a generalized 2D Gaussian function is defined as
 
 \begin{equation}
     \begin{aligned}
@@ -77,7 +77,7 @@ We follow existing fast subsurface scattering implementations, using multiple Ga
     \end{aligned}
 \end{equation}
 
-Compared to the standard 2D Gaussian function, we add a rotation parameter $\theta$ to allow $G^\prime$ to rotate. It enabled us to model more complex situations. In our implementation, $\theta$ is fixed for all Gaussian functions to be summed, which ensures that our assumptions hold. We thus define the relative chromophore concentration of each distribution as a sum of 3 or more $G^\prime$s (note that $\theta$ is the same for all $G^\prime$s), namely:
+Compared to the standard 2D Gaussian function, a rotation parameter $\theta$ is added to allow $G^\prime$ to rotate. It enables modeling more complex situations. In the implementation, $\theta$ is fixed for all Gaussian functions to be summed, which ensures that the assumptions hold. The relative chromophore concentration of each distribution is thus defined as a sum of 3 or more $G^\prime$s (note that $\theta$ is the same for all $G^\prime$s), namely:
 \begin{equation}
     \begin{aligned}
          & \hat{C_K}(x,y) = \sum_{i=1}^{N}G_i^\prime(x, y; \mu_x^i, \mu_y^i, \sigma_x^i, \sigma_y^i, \theta, A_i), \\
@@ -85,7 +85,7 @@ Compared to the standard 2D Gaussian function, we add a rotation parameter $\the
     \end{aligned}
 \end{equation}
 
-We fit those parameters by Levenberg-Marquardt method\cite{10.1007/BFb0067700} with \texttt{lmfit} Python library\cite{newville_matthew_2014_11813}. After successful fitting of $\hat{C_K}$s, we simply multiply them with user-input control parameters $\alpha_K$ to amplify/attenuate the intensity of chromophore channels. Thus, the relative reflection of a modified pigmentation can be written as
+The parameters are fitted by the Levenberg-Marquardt method\cite{10.1007/BFb0067700} with the \texttt{lmfit} Python library\cite{newville_matthew_2014_11813}. After successful fitting of $\hat{C_K}$s, they are simply multiplied with user-input control parameters $\alpha_K$ to amplify/attenuate the intensity of chromophore channels. Thus, the relative reflection of a modified pigmentation can be written as
 \begin{gather*}
     -log(\mathbf{k}^\prime) = \mathbf{E}\mathbf{A}\hat{\mathbf{c}},\\
     \mathbf{A}=diag(\alpha_H, \alpha_M, \alpha_r),\quad
@@ -96,20 +96,20 @@ We fit those parameters by Levenberg-Marquardt method\cite{10.1007/BFb0067700} w
 \begin{figure}[t]
     \centering
     \includegraphics[width=0.94\columnwidth]{Chapter3/system.pdf}
-    \caption{An overview of our skin blemish change simulation pipeline. In our pipeline, a box of Region of Interest (ROI) is first used to select the blemish like acne or pigmentation. Then, a \textit{Layer Separation Filter} is applied to separate the texture layer and the diffusion layers. A \textit{Sum-of-Gaussians} model is fitted to each ROI in \textit{Melanin/Heamoglobin} color space, with the parameters of the fitted model adjusted to manipulate the appearance of the blemishes. The modified diffusion layer is summed with the original texture layer to obtain the output.}
+    \caption{An overview of the proposed skin blemish change simulation pipeline. In the pipeline, a box of Region of Interest (ROI) is first used to select the blemish like acne or pigmentation. Then, a \textit{Layer Separation Filter} is applied to separate the texture layer and the diffusion layers. A \textit{Sum-of-Gaussians} model is fitted to each ROI in \textit{Melanin/Heamoglobin} color space, with the parameters of the fitted model adjusted to manipulate the appearance of the blemishes. The modified diffusion layer is summed with the original texture layer to obtain the output.}
     \label{fig:system}
 \end{figure}
 \subsection{Algorithm Implementations}
 
-As we show in Figure \ref{fig:system}, in our pipeline, we firstly adopted a skin layer separation filter to separate the skin into a surface texture layer (including specular reflections and skin textures) and a scattered chromophore layer. We implemented this by a Gaussian filter with a small variance, small enough to isolate the detail texture of the skin without affecting our assumptions. Then, we converted the image from sRGB to log-RGB space (assume the image is scaled to $[0,1]$ and with no Gamma correction).
+As shown in Figure \ref{fig:system}, in the pipeline, a skin layer separation filter is first adopted to separate the skin into a surface texture layer (including specular reflections and skin textures) and a scattered chromophore layer. This is implemented using a Gaussian filter with a small variance, small enough to isolate the detail texture of the skin without affecting the underlying assumptions. Then, the image is converted from sRGB to log-RGB space (assuming the image is scaled to $[0,1]$ and with no Gamma correction).
 
-We also made a simple GUI for users to draw bonding box or uploading a segmentation map to select desired spots. Then, we fitted for each spot and applied control parameters for each pigmentation channel. After that, the inverse color space transform was applied and the texture layer was bypassed from the input and added to the modified chromophore layer.
+A simple GUI is also created to allow users to draw bonding boxes or upload a segmentation map to select desired spots. Then, each spot is fitted and control parameters are applied for each pigmentation channel. After that, the inverse color space transform is applied and the texture layer, bypassed from the input, is added to the modified chromophore layer.
 
-In the actual implementation, we performed a number of optimisations to the program. 
+In the actual implementation, several optimizations are performed to the program:
 \begin{itemize}
-    \item First, each channel and each spot can be fitted independently. We then use multi-process parallelism to speed it up.
-    \item Second, since $\hat{C_K}$ has explicit partial derivatives, we manually derived its Jacobian matrix. This helped the fitting procedure to quickly compute accurate gradients rather than estimate it numerically.
-    \item Third, though we can fit the entire Sum-of-Gaussians model at once, the convergence of the fit will be slow. We thus adopted the following strategy: we gradually put a new $N$-th Gaussian function into the model with $N-1$ functions and fit the updated model, during which the existing parameters are frozen. Finally, we unfreeze all parameters for one more fitting as a fine-tuning. Thus, only one function was fitted each time except for the last one.
+    \item Each channel and each spot can be fitted independently. Multi-process parallelism is used to speed this up.
+    \item Since $\hat{C_K}$ has explicit partial derivatives, the Jacobian matrix is manually derived. This assists the fitting procedure to quickly compute accurate gradients rather than estimate them numerically.
+    \item Although the entire Sum-of-Gaussians model could be fitted at once, the convergence of the fit would be slow. Therefore, a strategy is adopted where a new $N$-th Gaussian function is gradually introduced into the model with $N-1$ functions and the updated model is fitted, during which the existing parameters are frozen. Finally, all parameters are unfrozen for one more fitting as a fine-tuning. In this way, only one function is fitted each time except for the last one.
 \end{itemize}
 
 This algorithm can be represented by the following pseudocode.
