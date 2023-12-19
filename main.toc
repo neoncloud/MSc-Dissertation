@@ -18,19 +18,22 @@
 \contentsline {subsection}{\numberline {2.3.3}Controllability}{12}{subsection.2.3.3}%
 \contentsline {chapter}{\numberline {3}Methods}{14}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Skin Chromophore Color Space Decomposition}{14}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Spot Appearance Modelling Based on Sum-of-Gaussians}{16}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Algorithm Implementations}{18}{subsection.3.2.1}%
-\contentsline {chapter}{\numberline {4}Experiments}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Dataset}{20}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Experiment Setup}{21}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Objective Evaluation}{21}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Subjective Evaluation}{22}{subsection.4.2.2}%
-\contentsline {chapter}{\numberline {5}Result \& Discussion}{24}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Versatility}{24}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Reality}{25}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Controllability}{28}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Perception Study}{29}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusion}{31}{chapter.6}%
-\contentsline {chapter}{References}{33}{chapter*.21}%
-\contentsline {chapter}{Appendix \numberline {A}Introduction of Appendix}{39}{appendix.a.A}%
-\contentsline {chapter}{Appendix \numberline {B}Sample Code}{40}{appendix.a.B}%
+\contentsline {section}{\numberline {3.2}Spot Appearance Modelling \& Editing}{16}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Algorithm Implementations}{19}{subsection.3.2.1}%
+\contentsline {subsubsection}{Preporcessing}{19}{section*.13}%
+\contentsline {subsubsection}{Optimizations in Fitting Process}{19}{section*.14}%
+\contentsline {subsubsection}{GUI Implementations}{21}{section*.15}%
+\contentsline {chapter}{\numberline {4}Experiments}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Dataset}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Experiment Setup}{24}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Objective Evaluation}{24}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Subjective Evaluation}{25}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {5}Result \& Discussion}{28}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Versatility}{28}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Reality}{29}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Controllability}{32}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Perception Study}{33}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusion}{35}{chapter.6}%
+\contentsline {chapter}{References}{37}{chapter*.27}%
+\contentsline {chapter}{Appendix \numberline {A}Introduction of Appendix}{43}{appendix.a.A}%
+\contentsline {chapter}{Appendix \numberline {B}Sample Code}{44}{appendix.a.B}%

@@ -44,45 +44,45 @@ Warning--empty journal in tsumuraImagebasedSkinColor
 Warning--empty year in tsumuraImagebasedSkinColor
 Warning--empty journal in linExemplarbasedFreckleRetouching2019
 Warning--empty year in linExemplarbasedFreckleRetouching2019
-You've used 44 entries,
+You've used 45 entries,
             1791 wiz_defined-function locations,
-            739 strings with 14584 characters,
-and the built_in function-call counts, 12806 in all, are:
-= -- 1092
-> -- 680
+            747 strings with 14786 characters,
+and the built_in function-call counts, 13035 in all, are:
+= -- 1112
+> -- 688
 < -- 18
-+ -- 240
-- -- 196
-* -- 854
-:= -- 1910
-add.period$ -- 144
-call.type$ -- 44
-change.case$ -- 44
++ -- 243
+- -- 198
+* -- 874
+:= -- 1946
+add.period$ -- 147
+call.type$ -- 45
+change.case$ -- 45
 chr.to.int$ -- 0
-cite$ -- 66
-duplicate$ -- 617
-empty$ -- 1205
-format.name$ -- 196
-if$ -- 2956
+cite$ -- 67
+duplicate$ -- 626
+empty$ -- 1229
+format.name$ -- 198
+if$ -- 3006
 int.to.chr$ -- 0
-int.to.str$ -- 44
-missing$ -- 42
-newline$ -- 219
-num.names$ -- 52
-pop$ -- 208
+int.to.str$ -- 45
+missing$ -- 43
+newline$ -- 224
+num.names$ -- 53
+pop$ -- 209
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 362
+skip$ -- 366
 stack$ -- 0
-substring$ -- 734
-swap$ -- 219
+substring$ -- 755
+swap$ -- 220
 text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 22
-while$ -- 108
-width$ -- 46
-write$ -- 469
+while$ -- 110
+width$ -- 47
+write$ -- 480
 (There were 24 warnings)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.6)  17 DEC 2023 19:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.6)  19 DEC 2023 11:06
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -563,6 +563,12 @@ Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 227.
+ (d:/texlive/2022/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks35
+\minrowclearance=\skip74
+)
+\rownum=\count344
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
 Package xcolor Info: Model `RGB' extended on input line 1368.
@@ -638,17 +644,17 @@ LaTeX Font Info:    ... okay on input line 58.
 
 (d:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count344
+\scratchcounter=\count345
 \scratchdimen=\dimen280
 \scratchbox=\box66
-\nofMPsegments=\count345
-\nofMParguments=\count346
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count347
+\nofMPsegments=\count346
+\nofMParguments=\count347
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count348
 \MPscratchDim=\dimen281
-\MPnumerator=\count348
-\makeMPintoPDFobject=\count349
-\everyMPtoPDFconversion=\toks36
+\MPnumerator=\count349
+\makeMPintoPDFobject=\count350
+\everyMPtoPDFconversion=\toks37
 ) (d:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -666,7 +672,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (d:/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count350
+\c@section@level=\count351
 )
 LaTeX Info: Redefining \ref on input line 58.
 LaTeX Info: Redefining \pageref on input line 58.
@@ -798,7 +804,7 @@ Overfull \hbox (22.79234pt too wide) in paragraph at lines 6--6
  []
 
 
-Overfull \hbox (6.79584pt too wide) in paragraph at lines 10--10
+Overfull \hbox (6.79584pt too wide) in paragraph at lines 12--12
  \OT1/ptm/m/n/12 Ar-rows are man-u-ally added to high-light blem-ishes of in-ter-est (acne 
  []
 
@@ -807,7 +813,7 @@ Overfull \hbox (6.79584pt too wide) in paragraph at lines 10--10
 
 
 ]
-Overfull \hbox (2.9807pt too wide) in paragraph at lines 15--15
+Overfull \hbox (2.9807pt too wide) in paragraph at lines 17--17
  \OT1/ptm/m/n/12 de-cou-ples the ma-jor chro-mophores of hu-man skin, en-abling highly 
  []
 
@@ -853,7 +859,7 @@ Overfull \hbox (2.6779pt too wide) in paragraph at lines 36--37
 
  (./Chapter2/Chapter2.tex
 Chapter 2.
-<Chapter2/HM_abs.png, id=356, 216.81pt x 151.767pt>
+<Chapter2/HM_abs.png, id=364, 216.81pt x 151.767pt>
 File: Chapter2/HM_abs.png Graphic file (type png)
 <use Chapter2/HM_abs.png>
 Package pdftex.def Info: Chapter2/HM_abs.png  used on input line 14.
@@ -876,7 +882,7 @@ Overfull \hbox (3.99963pt too wide) in paragraph at lines 22--23
 ] [7 <./Chapter2/HM_abs.png>]
 
 pdfTeX warning: pdflatex.exe (file ./Chapter2/skin_model2.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter2/skin_model2.pdf, id=378, 716.9174pt x 394.46542pt>
+<Chapter2/skin_model2.pdf, id=386, 716.9174pt x 394.46542pt>
 File: Chapter2/skin_model2.pdf Graphic file (type pdf)
 <use Chapter2/skin_model2.pdf>
 Package pdftex.def Info: Chapter2/skin_model2.pdf  used on input line 36.
@@ -897,12 +903,20 @@ Overfull \hbox (1.25208pt too wide) in paragraph at lines 51--52
  (./Chapter3/Chapter3.tex
 Chapter 3.
 
-Overfull \hbox (26.22397pt too wide) in paragraph at lines 11--12
+
+pdfTeX warning: pdflatex.exe (file ./Chapter3/system.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<Chapter3/system.pdf, id=574, 1905.0637pt x 540.91385pt>
+File: Chapter3/system.pdf Graphic file (type pdf)
+<use Chapter3/system.pdf>
+Package pdftex.def Info: Chapter3/system.pdf  used on input line 10.
+(pdftex.def)             Requested size: 387.81207pt x 110.11221pt.
+
+Overfull \hbox (26.22397pt too wide) in paragraph at lines 16--17
 \OT1/ptm/m/n/12 due to unique chro-mophores con-tained in the skin, such as melanin and heamoglobin,
  []
 
 
-Overfull \hbox (26.41599pt too wide) in paragraph at lines 20--21
+Overfull \hbox (26.41599pt too wide) in paragraph at lines 25--26
 []\OT1/ptm/m/n/12 In this work, the im-pact of two chro-mophores on the skin, melanin and heamoglobin,
  []
 
@@ -911,59 +925,64 @@ Overfull \hbox (26.41599pt too wide) in paragraph at lines 20--21
 
 
 
-]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 46.
+] [15 <./Chapter3/system.pdf>]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 51.
  (d:/texlive/2022/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [15]
-Overfull \hbox (36.90088pt too wide) in paragraph at lines 55--55
-[]\OT1/ptm/b/n/17.28 Spot Ap-pear-ance Mod-elling Based on Sum-of-Gaussians 
- []
-
-[16]
-
-pdfTeX warning: pdflatex.exe (file ./Chapter3/system.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter3/system.pdf, id=602, 1905.0637pt x 540.91385pt>
-File: Chapter3/system.pdf Graphic file (type pdf)
-<use Chapter3/system.pdf>
-Package pdftex.def Info: Chapter3/system.pdf  used on input line 98.
-(pdftex.def)             Requested size: 387.81207pt x 110.11221pt.
-[17] [18 <./Chapter3/system.pdf>]
-Overfull \hbox (3.2545pt too wide) in paragraph at lines 112--113
+) [16] [17] [18]
+Overfull \hbox (3.2545pt too wide) in paragraph at lines 129--130
 \OT1/ptm/m/n/12 where a new $\OML/ztmcm/m/it/12 N$\OT1/ptm/m/n/12 -th Gaus-sian func-tion is grad-u-ally in-tro-duced into the model
  []
 
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 117.
-LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 128.
-(d:/texlive/2022/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 128.
- [19])
+[19]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 134.
+
+
+pdfTeX warning: pdflatex.exe (file ./Chapter3/GUI.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<Chapter3/GUI.pdf, id=692, 472.26437pt x 692.08563pt>
+File: Chapter3/GUI.pdf Graphic file (type pdf)
+<use Chapter3/GUI.pdf>
+Package pdftex.def Info: Chapter3/GUI.pdf  used on input line 175.
+(pdftex.def)             Requested size: 371.30595pt x 544.14381pt.
+[20] [21 <./Chapter3/GUI.pdf>] [22])
 \openout2 = `Chapter4/Chapter4.aux'.
 
  (./Chapter4/Chapter4.tex
 Chapter 4.
-[20
+[23
 
 
 
 
 ]
-Overfull \hbox (2.65497pt too wide) in paragraph at lines 18--20
+Overfull \hbox (2.65497pt too wide) in paragraph at lines 35--36
 \OT1/ptm/m/n/12 To ob-jec-tively eval-u-ate im-age mod-i-fi-ca-tions, the Fr[]echet In-cep-tion Dis-tance (FID)
+ []
+
+[24]
+Overfull \hbox (8.16852pt too wide) in paragraph at lines 38--41
+\OT1/ptm/m/n/12 where $\OML/ztmcm/m/it/12 ^^V[]; ^^V[]$ \OT1/ptm/m/n/12 rep-re-sent the mean fea-ture vec-tors of the real and gen-er-ated/modified
  []
 
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter4/metadata.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter4/metadata.pdf, id=682, 599.74063pt x 307.64937pt>
+<Chapter4/metadata.pdf, id=737, 599.74063pt x 307.64937pt>
 File: Chapter4/metadata.pdf Graphic file (type pdf)
 <use Chapter4/metadata.pdf>
-Package pdftex.def Info: Chapter4/metadata.pdf  used on input line 23.
+Package pdftex.def Info: Chapter4/metadata.pdf  used on input line 44.
 (pdftex.def)             Requested size: 391.93546pt x 201.05411pt.
-[21] [22 <./Chapter4/metadata.pdf>] [23])
+<Chapter4/sample_form1.png, id=738, 370.38374pt x 485.24142pt>
+File: Chapter4/sample_form1.png Graphic file (type png)
+<use Chapter4/sample_form1.png>
+Package pdftex.def Info: Chapter4/sample_form1.png  used on input line 50.
+(pdftex.def)             Requested size: 371.30595pt x 486.45451pt.
+[25]
+Overfull \hbox (9.9503pt too wide) in paragraph at lines 57--58
+[]\OT1/ptm/m/n/12 Somewhat Con-fi-dent that some spots on the skin im-age are mod-i-fied/reduced
+ []
+
+[26 <./Chapter4/metadata.pdf>]) [27 <./Chapter4/sample_form1.png>]
 \openout2 = `Chapter5/Chapter5.aux'.
 
  (./Chapter5/Chapter5.tex
@@ -971,7 +990,7 @@ Chapter 5.
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/img_comp2.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter5/img_comp2.pdf, id=759, 908.26627pt x 249.17993pt>
+<Chapter5/img_comp2.pdf, id=817, 908.26627pt x 249.17993pt>
 File: Chapter5/img_comp2.pdf Graphic file (type pdf)
 <use Chapter5/img_comp2.pdf>
 Package pdftex.def Info: Chapter5/img_comp2.pdf  used on input line 9.
@@ -979,12 +998,12 @@ Package pdftex.def Info: Chapter5/img_comp2.pdf  used on input line 9.
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/img_comp4.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter5/img_comp4.pdf, id=762, 880.29305pt x 476.69122pt>
+<Chapter5/img_comp4.pdf, id=820, 880.29305pt x 476.69122pt>
 File: Chapter5/img_comp4.pdf Graphic file (type pdf)
 <use Chapter5/img_comp4.pdf>
 Package pdftex.def Info: Chapter5/img_comp4.pdf  used on input line 19.
 (pdftex.def)             Requested size: 412.56497pt x 223.41208pt.
-[24
+[28
 
 
 
@@ -992,7 +1011,7 @@ Package pdftex.def Info: Chapter5/img_comp4.pdf  used on input line 19.
  <./Chapter5/img_comp2.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/forward3.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter5/forward3.pdf, id=784, 1225.5785pt x 635.37675pt>
+<Chapter5/forward3.pdf, id=841, 1225.5785pt x 635.37675pt>
 File: Chapter5/forward3.pdf Graphic file (type pdf)
 <use Chapter5/forward3.pdf>
 Package pdftex.def Info: Chapter5/forward3.pdf  used on input line 29.
@@ -1002,10 +1021,10 @@ Overfull \hbox (0.26672pt too wide) in paragraph at lines 37--38
 \OT1/ptm/m/n/12 Exploration of re-al-ity eval-u-ates the pro-posed al-go-rithm's abil-ity to sim-u-late com-
  []
 
-[25 <./Chapter5/img_comp4.pdf>]
+[29 <./Chapter5/img_comp4.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/baseline11.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter5/baseline11.pdf, id=810, 991.4581pt x 371.89108pt>
+<Chapter5/baseline11.pdf, id=866, 991.4581pt x 371.89108pt>
 File: Chapter5/baseline11.pdf Graphic file (type pdf)
 <use Chapter5/baseline11.pdf>
 Package pdftex.def Info: Chapter5/baseline11.pdf  used on input line 46.
@@ -1013,7 +1032,7 @@ Package pdftex.def Info: Chapter5/baseline11.pdf  used on input line 46.
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/baseline12.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter5/baseline12.pdf, id=811, 992.21092pt x 373.39671pt>
+<Chapter5/baseline12.pdf, id=867, 992.21092pt x 373.39671pt>
 File: Chapter5/baseline12.pdf Graphic file (type pdf)
 <use Chapter5/baseline12.pdf>
 Package pdftex.def Info: Chapter5/baseline12.pdf  used on input line 51.
@@ -1023,28 +1042,28 @@ Overfull \hbox (5.42648pt too wide) in paragraph at lines 41--56
 []\OT1/ptm/m/n/12 Fr[]echet In-cep-tion Dis-tance (FID) scores for the sim-u-lated im-ages and the ground-
  []
 
-[26 <./Chapter5/forward3.pdf>] [27 <./Chapter5/baseline11.pdf> <./Chapter5/baseline12.pdf
+[30 <./Chapter5/forward3.pdf>] [31 <./Chapter5/baseline11.pdf> <./Chapter5/baseline12.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/baseline12.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/grid.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter5/grid.pdf, id=933, 963.6pt x 963.6pt>
+<Chapter5/grid.pdf, id=990, 963.6pt x 963.6pt>
 File: Chapter5/grid.pdf Graphic file (type pdf)
 <use Chapter5/grid.pdf>
 Package pdftex.def Info: Chapter5/grid.pdf  used on input line 80.
 (pdftex.def)             Requested size: 396.06514pt x 396.06369pt.
-<Chapter5/score.pdf, id=935, 777.47667pt x 398.05481pt>
+<Chapter5/score.pdf, id=992, 777.47667pt x 398.05481pt>
 File: Chapter5/score.pdf Graphic file (type pdf)
 <use Chapter5/score.pdf>
 Package pdftex.def Info: Chapter5/score.pdf  used on input line 94.
 (pdftex.def)             Requested size: 352.73952pt x 180.59286pt.
-<Chapter5/bar_charts_modified.pdf, id=936, 867.24pt x 361.35pt>
+<Chapter5/bar_charts_modified.pdf, id=993, 867.24pt x 361.35pt>
 File: Chapter5/bar_charts_modified.pdf Graphic file (type pdf)
 <use Chapter5/bar_charts_modified.pdf>
 Package pdftex.def Info: Chapter5/bar_charts_modified.pdf  used on input line 100.
 (pdftex.def)             Requested size: 352.73952pt x 146.97452pt.
-[28] [29 <./Chapter5/grid.pdf>]) [30 <./Chapter5/score.pdf> <./Chapter5/bar_charts_modified.pdf
+[32] [33 <./Chapter5/grid.pdf>]) [34 <./Chapter5/score.pdf> <./Chapter5/bar_charts_modified.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/bar_charts_modified.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
@@ -1057,26 +1076,26 @@ Overfull \hbox (5.49893pt too wide) in paragraph at lines 8--9
 \OT1/ptm/m/n/12 A novel method for sim-u-lat-ing skin spot changes is pro-posed, uti-liz-ing a physics-
  []
 
-[31
+[35
 
 
 
 
-] [32]) (./main.bbl [33
+] [36]) (./main.bbl [37
 
 
 
-] [34] [35] [36]
-Underfull \hbox (badness 1983) in paragraph at lines 259--264
+] [38] [39] [40]
+Underfull \hbox (badness 1983) in paragraph at lines 265--270
 []\OT1/ptm/m/n/12 F. Pe-dregosa, G. Varo-quaux, A. Gram-fort, V. Michel, B. Thirion,
  []
 
-[37]) [38]
+[41]) [42]
 \openout2 = `Appendix/appendix.aux'.
 
  (./Appendix/appendix.tex
 Appendix A.
-[39
+[43
 
 
 ]
@@ -1087,25 +1106,25 @@ LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 6.
  (d:/texlive/2022/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-))) [40
+))) [44
 
 ] (./main.aux (./Title/coverpage.aux) (./Title/titlepage.aux) (./Title/SoO.aux) (./Title/SDS.aux) (./Title/AAS.aux) (./Front/Abstract.aux) (./Front/Acronyms.aux) (./Front/Symbols.aux) (./Chapter1/Chapter1.aux) (./Chapter2/Chapter2.aux) (./Chapter3/Chapter3.aux) (./Chapter4/Chapter4.aux) (./Chapter5/Chapter5.aux) (./Chapter6/Chapter6.aux) (./Appendix/appendix.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FA0682BF25AC20B1685E8B49444788A1;5558.
+(rerunfilecheck)             Checksum: CE71721C0B75E232EE6E6AC87ADA919B;5478.
  ) 
 Here is how much of TeX's memory you used:
- 18724 strings out of 478268
- 331157 string characters out of 5850346
- 752176 words of memory out of 5000000
- 36278 multiletter control sequences out of 15000+600000
- 512125 words of font info for 114 fonts, out of 8000000 for 9000
+ 18809 strings out of 478268
+ 332652 string characters out of 5850346
+ 755569 words of memory out of 5000000
+ 36341 multiletter control sequences out of 15000+600000
+ 514246 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,14n,117p,1923b,722s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,15n,117p,1923b,722s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {d:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (53 pages, 9135090 bytes).
+Output written on main.pdf (57 pages, 9878378 bytes).
 PDF statistics:
- 1506 PDF objects out of 1728 (max. 8388607)
- 1054 compressed objects within 11 object streams
- 156 named destinations out of 1000 (max. 500000)
- 354 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1566 PDF objects out of 1728 (max. 8388607)
+ 1099 compressed objects within 11 object streams
+ 174 named destinations out of 1000 (max. 500000)
+ 364 words of extra memory for PDF output out of 10000 (max. 10000000)
 
