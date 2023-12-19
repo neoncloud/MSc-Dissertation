@@ -36,8 +36,6 @@ Versatility is a key attribute of the proposed algorithm's ability to be general
 \end{figure}
 Exploration of reality evaluates the proposed algorithm's ability to simulate complex changes in real human skin conditions. Some skin blemish samples with long-term evolution patterns from the dataset are selected and simulated using the proposed algorithm. Figure \ref{fig:forward} shows one example, revealing the gradual fading of pigmentations over 7 weeks. The proposed algorithm successfully simulates the natural fading trajectory of the pigmentations, showing a natural change in color.
 
-For the PS method, the inpainting tool of the software is utilized, selecting and removing blemishes on the original image under the Content-Aware mode. The modified image is then combined with the original image through Alpha blending. For the SD method, the inpainting mode is used and the text prompt is set as \texttt{skin patch, human face skin, high definition, best quality}. Each test is performed with 50 iterations of sampling using the \texttt{DPM++SDE Karras} sampler, with the random seed fixed to 42. The denoising ratio is adjusted to increase the difference between the generated image and the original.
-
 Fréchet Inception Distance (FID) scores for the simulated images and the ground-truth images are calculated to quantitatively measure the quality of algorithms for skin blemish editing. The results are displayed in Table \ref{tbl:fid} and the visual comparison is shown in Figure \ref{fig:baseline}.
 \begin{figure}[t!]
     \centering
@@ -103,8 +101,31 @@ A changing matrix is plotted by adjusting the concentration control parameters o
     \end{subfigure}
     \caption{Panellists scored images from -2 to +2 to assess their confidence in considering the image as modified or not, with higher scores indicating that the user considered the image to be unmodified. Scoring frequencies are displayed in Figure \ref{fig:survey_hist}. The results of the survey are shown in Figure \ref{fig:bar_charts}. For the modified images, more people perceived them as unmodified or not sure. This suggests that the modifications are consistent with human perception and intuition.}
 \end{figure}
+\begin{table}[t!]
+    \caption{Key Statistics and Score Distribution from the Image Perception Study}
+    \resizebox{\columnwidth}{!}{%
+        \begin{tabular}{lrr}
+            \hline
+            \multicolumn{1}{l}{Score} & \multicolumn{1}{r}{Real Images (\%)} & \multicolumn{1}{r}{Fake Images (\%)} \\ \hline\hline
+            -2 (Definitely Fake)      & 4.11  & 5.37  \\
+            -1 (Likely Fake)          & 20.46 & 25.22 \\
+            0 (Indistinguishable)     & 24.20 & \textbf{26.56} \\
+            1 (Likely Real)           & 38.28 & 32.80 \\
+            2 (Definitely Real)       & 12.96 & 10.06 \\ \hline
+            \textbf{Average Score}    & 0.35511 & 0.16956 \\
+            \textbf{Correctly Identified} & 51.23 & \textbf{30.59} \\
+            \textbf{Failed to Identify (including Indistinguishable)} & 48.77 & \textbf{69.42} \\ \hline
+        \end{tabular}%
+    }
+    \label{tab:image_perception_stats}
+\end{table}
 The objective of this study is to evaluate if the pigmentation simulation is natural and believable. As shown in Figure \ref{fig:bar_charts}, the altered images had a lower average score (0.16956 vs 0.35511), with only 30.6\% correctly identifying the altered image vs 23.6\% judging the real images as altered, and 26.6\% not sure if it is or is not altered. This indicates that the effect of the proposed algorithm is superior, to the point where laypeople cannot readily discern traces of algorithmic alteration.
-
+The analysis revealed several key insights:
+\begin{itemize}
+    \item \textbf{Score Distribution} The distribution of scores for both real and altered images showed a significant overlap, especially for scores 0 and 1, indicating a level of ambiguity in distinguishing between real and simulated images.
+    \item \textbf{Accuracy in Identification} Panellists correctly identified real images as real 51.23\% of the time, whereas they correctly identified altered images only 30.59\% of the time. This suggests a higher degree of realism in the simulated images.
+    \item \textbf{Perception of Altered Images} Interestingly, a significant portion (42.86\%) of the altered images were perceived as real, and when considering scores of 0 as indistinguishable, this figure rose to 69.41\%. This underscores the effectiveness of the simulation in creating convincing images.
+\end{itemize}
 %=== END OF CHAPTER FIVE ===
 \end{spacing}
 \newpage

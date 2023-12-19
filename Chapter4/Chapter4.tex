@@ -9,27 +9,46 @@ To the best of the authors' knowledge, there is currently no dataset for studies
 
 In the simulation, images of Week 0 are input and the parameters of the obtained model are adjusted to simulate the change of the blemishes in the following weeks. As shown in Figure\ref{fig:forward}, the input is labelled as \textit{Week 0} and the images for the next few weeks as \textit{+n W}.
 \begin{table}[t!]
+    \caption{Summary of Dataset Statistics}
     \centering
-    \begin{tabular}{lr|lr|lr}
+    \begin{tabular}{lrlrlr}
         \toprule
-        \multicolumn{2}{c|}{\textbf{ITA Score}} & \multicolumn{2}{c|}{\textbf{Ethnicity}} & \multicolumn{2}{c}{\textbf{Skin Tone Classification}} \\
+        \multicolumn{2}{c}{\textbf{ITA Score}} & \multicolumn{2}{c}{\textbf{Ethnicity}} & \multicolumn{2}{c}{\textbf{Skin Tone Classification}} \\
         \midrule
-        Total Subjects & 223 & African & 126 & Brown & 132 \\
-        ITA Mean & 2.58 & Caucasian & 98 & Dark & 76 \\
-        ITA Variance & 851.90 &
-        Indian & 108 & Intermediate & 62 \\
-        & & Latino & 114 & Light & 8 \\
-        & &
-        & & Tan & 152 \\
+        \midrule
+        Total Subjects        & 223   & African       & 126 & Brown         & 132 \\
+        ITA Mean              & 2.58  & Caucasian     & 98  & Dark          & 76  \\
+        ITA Variance          & 851.90 & Indian       & 108 & Intermediate  & 62  \\
+                              &       & Latino        & 114 & Light         & 8   \\
+                              &       &               &     & Tan           & 152 \\
         \bottomrule
     \end{tabular}
-    \caption{Summary of Dataset Statistics}
     \label{tab:dataset_summary}
 \end{table}
+
 \section{Experiment Setup}
 In this study, extensive blemish change simulation experiments are carried out to evaluate the proposed algorithm's effectiveness. Each pigmentation is fitted with 3 Gaussian functions summation and $\sigma=10$ is set for the skin texture layer separation filter. The focus is mainly on the relative concentration changes of the pigmentation, and a series of simulations are conducted based on tuning the concentration parameter after successfully fitting pigmentations.
 
-Inpainting mode of \textbf{Stable Diffusion}(SD)\cite{rombach2021highresolution} and \textbf{Adobe Photoshop}(PS)'s inpainting tool\cite{adobephotoshop} are selected for comparison as baseline models. The former, a top-performing deep learning model, represents the "latent space editing" method discussed. The intensity of blemish removal is controlled by adjusting the denoising level. The latter, a common image editing software, represents the "pixel space editing" method. Here, the degree of blemish removal is adjusted by altering layer blending opacity.
+Inpainting mode of \textbf{Stable Diffusion}(SD)\cite{rombach2021highresolution} and \textbf{Adobe Photoshop}(PS)'s inpainting tool\cite{adobephotoshop} are selected for comparison as baseline models. The former, a top-performing deep learning model, represents the "latent space editing" method discussed. For the SD method, the inpainting mode is used and the text prompt is set as \texttt{skin patch, human face skin, high definition, best quality}. Each test is performed with 50 iterations of sampling using the \texttt{DPM++SDE Karras} sampler, with the random seed fixed to 42. The denoising ratio is adjusted to increase the difference between the generated image and the original so that the intensity of blemish removal is controlled. 
+
+For the PS method, a common image editing software, represents the "pixel space editing" method. Here, the inpainting tool is utilized, selecting and removing blemishes on the original image with \textit{Content-Aware} mode. The modified image is then combined with the original image through Alpha blending. And the degree of blemish removal is adjusted by altering blending opacity.
+
+\begin{figure}[t!]
+    \centering
+    \begin{subfigure}{.97\textwidth}
+        \centering
+        \includegraphics[width=0.97\columnwidth]{Chapter4/ps_ui.pdf}
+        \caption{Adobe Photoshop (PS) inpainting tool}
+        % \label{fig:gui1}
+    \end{subfigure}\hfill
+    \begin{subfigure}{.97\textwidth}
+        \centering
+        \includegraphics[width=0.97\columnwidth]{Chapter4/sd_ui.pdf}
+        \caption{Stable Diffusion (SD) inpainting mode}
+    \end{subfigure}
+    \caption{Example of a baseline models. Widely available and easily reproducible baseline methods are selected for comparison. Specifically, Adobe Photoshop(PS) is chosen For \textit{pixel space} editing methods, which is the most commonly used image editing and retouching software. For \textit{latent space} editing methods, Stable Diffusion(SD), recognised for its high-quality generation, is selected.}
+    \label{fig:ps_sd}
+\end{figure}
 
 \subsection{Objective Evaluation}
 To objectively evaluate image modifications, the Fréchet Inception Distance (FID) is applied. FID is a common tool for assessing GANs and similar image-generating models. It uses the Inception V3\cite{DBLP:conf/cvpr/SzegedyVISW16} model to derive the mean and covariance matrix of feature vectors from both authentic and generated image collections. Then, it calculates the Fréchet distance between these statistical groups. This distance gauges the variation between two multi-dimensional Gaussian distributions. Generated images resembling real images more closely have lower FID scores, while higher scores show a bigger divergence. Formally, the FID score is denoted as:
