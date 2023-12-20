@@ -12,7 +12,7 @@
 \end{figure}
 The simulation quality and result are evaluated in terms of versatility, reality, and controllability. A detailed discussion of each aspect follows.
 \section{Versatility}
-Versatility is a key attribute of the proposed algorithm's ability to be generalized to various scenarios. By testing various patterns and degrees of pigmentation, acne, and other skin aberrations, the successful application of the proposed algorithm on multiple skin tones and different types of skin blemishes is demonstrated. Figure \ref{fig:sim1} clearly illustrates how the proposed algorithm accurately models the local chromophore enrichment of the skin, thus realizing genuine blemish change simulation. Particularly noteworthy is that the proposed method maintains the subtle textures of the skin unaltered, as fine hairs or pores shown in Figure \ref{fig:sim1}, further proving its high precision and usability.
+Versatility is a key attribute of the proposed algorithm's ability to be generalized to various scenarios. By testing various patterns and degrees of pigmentation, acne, and other skin blemishes, the successful application of the proposed algorithm on multiple skin tones and different types of skin blemishes is demonstrated. Figure \ref{fig:sim1} clearly illustrates how the proposed algorithm accurately models the local chromophore enrichment of the skin, thus realizing genuine blemish change simulation. Particularly noteworthy is that the proposed method maintains the subtle textures of the skin unaltered, as fine hairs or pores shown in Figure \ref{fig:sim1}, further proving its high precision and usability.
 % \begin{figure}[t]
 %     \centering
 %     \includegraphics[width=\columnwidth]{Chapter5/img_comp4.pdf}
@@ -27,7 +27,7 @@ Versatility is a key attribute of the proposed algorithm's ability to be general
     \caption{The application of the proposed method to the simulation of the fading process of skin blemish is shown. Blue Arrows are manually added to highlight blemishes of interest (acne or pigmentation). In the simulation, images of \textit{Week 0} are input and the parameters of the obtained model are adjusted to simulate the change of the blemishes in the following weeks. Note that the proposed method applies to different skin tones and various types of blemishes.}
     \label{fig:forward}
 \end{figure}
-Exploration of reality evaluates the proposed algorithm's ability to simulate complex changes in real human skin conditions. Some skin blemish samples with long-term evolution patterns from the dataset are selected and simulated using the proposed algorithm. Figure \ref{fig:forward} shows one example, revealing the gradual fading of pigmentations over 7 weeks. The proposed algorithm successfully simulates the natural fading trajectory of the pigmentations, showing a natural change in color.
+Exploration of reality evaluates the proposed algorithm's ability to simulate complex changes in real human skin conditions. Some skin blemish samples with long-term evolution patterns from the dataset are selected and simulated using the proposed algorithm. Figure \ref{fig:forward} shows one example, revealing the gradual fading of blemishes over 7 weeks. The proposed algorithm successfully simulates the natural fading trajectory of the blemishes, showing a natural change in color.
 
 Fréchet Inception Distance (FID) scores for the simulated images and the ground-truth images are calculated to quantitatively measure the quality of algorithms for skin blemish editing. The results are displayed in Table \ref{tbl:fid} and the visual comparison is shown in Figure \ref{fig:baseline}.
 \begin{figure}[t!]
@@ -72,16 +72,16 @@ Fréchet Inception Distance (FID) scores for the simulated images and the ground
 \begin{figure}[t!]
     \centering
     \includegraphics[width=0.96\columnwidth]{Chapter5/grid.pdf}
-    \caption{Matrix of different chromophore concentrations setting. The original image is marked by a red box. The proposed model fully decouples the major chromophores of human skin, enabling highly controllable pigmentation editing.}
+    \caption{Matrix of different chromophore concentrations setting. The original image is marked by a red box. The proposed model fully decouples the major chromophores of human skin, enabling highly controllable blemishes editing.}
     \label{fig:matrix}
 \end{figure}
 For the FID scores, the proposed method achieved the lowest scores in the vast majority of cases, except for the 20\% fading rate. In particular, the proposed method has less variation in FID scores compared to other baselines at different fading rates, which suggests that the proposed model is able to achieve robust, realistic skin blemish simulations.
 
 Visual comparison more intuitively demonstrates the superiority of the proposed algorithm. The PS method, although straightforward, led to a loss of skin detail through simple interpolation, resulting in blurry patches. Conversely, the SD method generated some contextually coherent skin details while removing the blemishes, but its quality was limited. Specifically, at higher denoising ratios, the SD method produced noticeable artifacts, and the modified areas differed in color from the surrounding skin.
 
-The proposed method not only closely aligns with the natural degradation process of real skin but also ensures that the modified pigmentations match the underlying skin seamlessly. Unlike other techniques, this approach does not create artifacts or blurriness. It maintains skin details, including subtle textures such as hair and pores, leading to a natural appearance. This underlines the effectiveness of the proposed method in preserving the intricacy of skin texture while accomplishing realistic modifications.
+The proposed method not only closely aligns with the natural degradation process of real skin but also ensures that the modified blemishes match the underlying skin seamlessly. Unlike other techniques, this approach does not create artifacts or blurriness. It maintains skin details, including subtle textures such as hair and pores, leading to a natural appearance. This underlines the effectiveness of the proposed method in preserving the intricacy of skin texture while accomplishing realistic modifications.
 \section{Controllability}
-Controllability is key to user interaction with the proposed algorithm. A significant advantage of the proposed model is its high controllability, where users can freely adjust the parameters of the pigmentation to precisely control its appearance.
+Controllability is key to user interaction with the proposed algorithm. A significant advantage of the proposed model is its high controllability, where users can freely adjust the parameters of the blemishes to precisely control its appearance.
 A changing matrix is plotted by adjusting the concentration control parameters of melanin and heamoglobin, as shown in Figure \ref{fig:matrix}. The proposed method successfully decouples the concentrations of these two chromophores, allowing users to independently control their apparent features, thus flexibly simulating the change of blemishes under different conditions.
 \section{Perception Study}
 \begin{figure}[t!]
@@ -118,7 +118,7 @@ A changing matrix is plotted by adjusting the concentration control parameters o
     }
     \label{tbl:image_perception_stats}
 \end{table}
-The objective of this study is to evaluate if the pigmentation simulation is natural and believable. As shown in Figure \ref{fig:bar_charts} and Table \ref{tbl:image_perception_stats}, the altered images had a lower average score (0.16956 vs 0.35511), with only 30.6\% correctly identifying the altered image vs 23.6\% judging the real images as altered, and 26.6\% not sure if it is or is not altered. This indicates that the effect of the proposed algorithm is superior, to the point where laypeople cannot readily discern traces of algorithmic alteration.
+The objective of this study is to evaluate if the blemishes changing simulation is natural and believable. As shown in Figure \ref{fig:bar_charts} and Table \ref{tbl:image_perception_stats}, the altered images had a lower average score (0.16956 vs 0.35511), with only 30.6\% correctly identifying the altered image vs 23.6\% judging the real images as altered, and 26.6\% not sure if it is or is not altered. This indicates that the effect of the proposed algorithm is superior, to the point where laypeople cannot readily discern traces of algorithmic alteration.
 The analysis revealed several key insights:
 \begin{itemize}
     \item \textbf{Score Distribution} The distribution of scores for both real and altered images showed a significant overlap, especially for scores 0 and 1, indicating a level of ambiguity in distinguishing between real and simulated images.

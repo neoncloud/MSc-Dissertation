@@ -57,7 +57,7 @@ It is reported that there is no significant difference in skin thickness between
     \end{bmatrix}
 \end{equation}
 
-\section{Spot Appearance Modelling \& Editing}
+\section{Blemishes Appearance Modelling \& Editing}
 Given a 3-channel image patch $C(\mathbf{x})\in\mathbb{R}^{3\times h\times w}, \mathbf{x}\in\mathbb{R}^2$ with length $w$ and height $h$, containing a user-selected blemish, we assume it can be divided into normal skin $C_K^{skin}$ and blemish $C_K^{blem}$ in chromophore color space, that is
 \begin{equation}
   C_K(\mathbf{x}) = C_K^{skin}(\mathbf{x}) + C_K^{blem}(\mathbf{x}),\quad K\in\{H,M,r\}.
@@ -66,7 +66,7 @@ For the estimation of $C_K^{skin}$, we assume that skin color changes are smooth
 \begin{equation}
   \hat{C_K^{skin}}(\mathbf{x};\mathbf{k},d)=\mathbf{k}\mathbf{x}+d,\quad\mathbf{k}\in\mathbb{R}^2, d\in\mathbb{R}.
 \end{equation}
-For the estimation of $C_K^{blem}$, the proposed method is based on the observation that pigmentation and acne of interest tend to have blurred edges due to the subsurface scattering of light under the skin. On one hand, they are caused by local accumulation of chromophores under the skin due to various stressors such as UV or inflammation, which can be modeled as Gaussian distributions. On the other hand, subsurface scattering of light under the skin makes pigmentation look even blurry. With Gaussian functions, both phenomena can be described very well, because the convolution of two Gaussian functions is still a Gaussian function, namely:
+For the estimation of $C_K^{blem}$, the proposed method is based on the observation that pigmentation and acne of interest tend to have blurred edges due to the subsurface scattering of light under the skin. On one hand, they are caused by local accumulation of chromophores under the skin due to various stressors such as UV or inflammation, which can be modeled as Gaussian distributions. On the other hand, subsurface scattering of light under the skin makes blemishes look even blurry. With Gaussian functions, both phenomena can be described very well, because the convolution of two Gaussian functions is still a Gaussian function, namely:
 \begin{equation}
     \begin{aligned}
          & G(x; \mu_a, \sigma_a, a)\star G(x; \mu_b, \sigma_b, b)                 \\
@@ -125,16 +125,16 @@ Subsequently, in color space transform stage, inverse gamma correction is applie
 \subsubsection{Optimizations in Fitting Process}
 In the actual implementation, several optimizations are performed to the program:
 \begin{itemize}
-    \item Each channel and each spot can be fitted independently and multi-process parallelism can be used to speed this up. Thus, the program packages each fitting session into a task and uses Python's thread pool to build a task queue, fully utilizing the computing power of multi-core CPUs.  
+    \item Each channel and each blemish can be fitted independently and multi-process parallelism can be used to speed this up. Thus, the program packages each fitting session into a task and uses Python's thread pool to build a task queue, fully utilizing the computing power of multi-core CPUs.  
     \item Although the entire Sum-of-Gaussians model could be fitted at once, the convergence of the fit would be slow. Therefore, a strategy is adopted where a new $N$-th Gaussian function is gradually introduced into the model with $N-1$ functions and the updated model is fitted, during which the existing parameters are frozen. Finally, all parameters are unfrozen for one more fitting as a fine-tuning. In this way, only one function is fitted each time except for the last one.
     \item In Levenberg-Marquardt iterations, it requires compute the Jacobian matrix for each steps. Since each component in $\hat{C_k}$ has explicit partial derivatives and they are just simply summed togeter, the Jacobian matrix of $\hat{C_k}$ can be manually derived. This assists the Levenberg-Marquardt algorithm to quickly compute accurate gradients rather than estimate them numerically.
 \end{itemize}
 This algorithm can be represented by the following pseudocode.
 \begin{algorithm}
-    \caption{Fitting Distribution of a Spot}
+    \caption{Fitting Distribution of a Blemish}
     \begin{algorithmic}[1]
     
-    \State \textbf{Input:} Spot image patch $X\in\mathbb{R}^{3\times h \times w}$, per-channel gain $\alpha_K\in\mathbb{R}^3$. All from user-input.
+    \State \textbf{Input:} Blemish image patch $X\in\mathbb{R}^{3\times h \times w}$, per-channel gain $\alpha_K\in\mathbb{R}^3$. All from user-input.
     
     \State \textbf{Preprocessing:}
     % \Indent
@@ -155,7 +155,7 @@ This algorithm can be represented by the following pseudocode.
     \State $X_d \gets X_d+\hat{C_k}$
     \State $X_d \gets InverseColorTransform(X_d)$
     \State $X \gets X_d+X_t$
-    \State \textbf{Return:} Fitted parameters and modified spot image
+    \State \textbf{Return:} Fitted parameters and modified blemish image
     \end{algorithmic}
     \end{algorithm}
 \subsubsection{GUI Implementations}
@@ -178,10 +178,10 @@ This algorithm can be represented by the following pseudocode.
 \end{figure}
 As shown in Figure\ref{fig:gui}, a simple graphical user interface (GUI) is also created to facilitate the editing of facial images by users with varying levels of expertise. The GUI is organized into several sections, each providing tools for specific tasks in the editing process.
 \begin{itemize}
-    \item \textbf{Image Upload and Spot Selection} The initial interaction with the interface is the image upload functionality, denoted by circled numeral 1 in Figure \ref{fig:gui}. Users can upload the facial image they intend to edit. Following the upload, the image is displayed within the central work area of the GUI, allowing users to identify and select skin spots for removal or modification. This selection process is designed to be intuitive, employing a simple point-and-click mechanism to mark areas of interest, as indicated by circled numeral 2.
-    \item \textbf{Basic and Advanced Editing Controls} Post spot selection, users can adjust the editing intensity using the 'alpha' parameter, a slider control located in the section marked by circled numeral 3 in Figure \ref{fig:gui}. This allows for the manipulation of the editing gain in a user-friendly manner. Activating the 'Run' button initiates the rendering process, culminating in the display of the modified image where the selected spots have been processed according to the specified parameters.
+    \item \textbf{Image Upload and Blemish Selection} The initial interaction with the interface is the image upload functionality, denoted by circled numeral 1 in Figure \ref{fig:gui}. Users can upload the facial image they intend to edit. Following the upload, the image is displayed within the central work area of the GUI, allowing users to identify and select skin blemishes for removal or modification. This selection process is designed to be intuitive, employing a simple point-and-click mechanism to mark areas of interest, as indicated by circled numeral 2.
+    \item \textbf{Basic and Advanced Editing Controls} After blemish selection, users can adjust the editing intensity using the 'alpha' parameter, a slider control located in the section marked by circled numeral 3 in Figure \ref{fig:gui}. This allows for the manipulation of the editing gain in a user-friendly manner. Activating the 'Run' button initiates the rendering process, culminating in the display of the modified image where the selected blemishes have been processed according to the specified parameters.
 
-    For users requiring more sophisticated control, the interface offers advanced editing options as shown in circled numeral 4. This advanced control panel permits individual adjustments to the gains of separate color channels, thus affording an enhanced level of precision in the spot editing process.
+    For users requiring more sophisticated control, the interface offers advanced editing options as shown in circled numeral 4. This advanced control panel permits individual adjustments to the gains of separate color channels, thus affording an enhanced level of precision in the blemish editing process.
     \item \textbf{Parameter Exportation for Analysis} An essential feature of the GUI, highlighted in circled numeral 5 in Figure \ref{fig:gui}, is the ability to download the fitting results. This function caters to expert users who wish to perform a detailed analysis of the editing parameters or to utilize these parameters for further processing steps, thereby extending the capabilities of the system.
 \end{itemize}
 %=== END OF CHAPTER THREE ===

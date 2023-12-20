@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {1.4}Major contribution of the Dissertation}{4}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Organisation of the Dissertation}{5}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Literature Review}{6}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Skin Chromophores \& Pigmentation}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Skin Chromophores \& Blemishes}{6}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Skin Modeling \& Rendering Techniques}{8}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Controllable Facial Image Editing}{11}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Objectives and Definitions}{11}{subsection.2.3.1}%
@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {2.3.3}Controllability}{13}{subsection.2.3.3}%
 \contentsline {chapter}{\numberline {3}Methods}{15}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Skin Chromophore Color Space Decomposition}{15}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Spot Appearance Modelling \& Editing}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Blemishes Appearance Modelling \& Editing}{17}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Algorithm Implementations}{20}{subsection.3.2.1}%
 \contentsline {subsubsection}{Preporcessing}{20}{section*.13}%
 \contentsline {subsubsection}{Optimizations in Fitting Process}{20}{section*.14}%

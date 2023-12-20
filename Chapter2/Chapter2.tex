@@ -6,17 +6,17 @@
 \setlength{\parskip}{0.3in}
 
 % \section{Overview}
-In this chapter, the definition and physiological features of skin pigmentation are first reviewed. Then, the field of computer graphics is examined, discussing how to model skin and pigmentation to achieve realistic skin image rendering. Finally, attention is turned to the field of computer vision, where state-of-the-art image modeling and editing methods are reviewed, assessing the degree of fit and gaps between the goals of this task and existing methods.
+In this chapter, the definition and physiological features of skin blemishes are first reviewed. Then, the field of computer graphics is examined, discussing how to model skin and blemishes to achieve realistic skin image rendering. Finally, attention is turned to the field of computer vision, where state-of-the-art image modeling and editing methods are reviewed, assessing the degree of fit and gaps between the goals of this task and existing methods.
 
-\section{Skin Chromophores \& Pigmentation}
+\section{Skin Chromophores \& Blemishes}
 \begin{figure}
     \centering
     \includegraphics[width=0.9\columnwidth]{Chapter2/HM_abs.png}
-    \caption{Spectral absorption coefficients of skin chromophore. This work focused on modelling heamoglobin and melanin distribution of skin pigmentation. Image taken from\cite{10.5555/2383894.2383946}}.
+    \caption{Spectral absorption coefficients of skin chromophore. This work focused on modelling heamoglobin and melanin distribution of skin blemishes. Image taken from\cite{10.5555/2383894.2383946}}.
     \label{fig:hm_abs}
 \end{figure}
 
-What gives human skin its diverse colors? When light is transmitted into the skin, energy of different wavelengths is selectively absorbed by the chromophores, scattered by the skin tissues and then observed in unique colors. The color of human skin and skin pigmentations is primarily influenced by several key chromophores, namely \textit{Melanin}, \textit{Hemoglobin}, \textit{Carotene}, and \textit{Bilirubin}. These pigments, each with unique optical properties, contribute to the skin's overall coloration and appearance:
+What gives human skin its diverse colors? When light is transmitted into the skin, energy of different wavelengths is selectively absorbed by the chromophores, scattered by the skin tissues and then observed in unique colors. The color of human skin and skin blemishes is primarily influenced by several key chromophores, namely \textit{Melanin}, \textit{Hemoglobin}, \textit{Carotene}, and \textit{Bilirubin}. These pigments, each with unique optical properties, contribute to the skin's overall coloration and appearance:
 
 \begin{itemize}
     \item \textbf{Hemoglobin} Found in red blood cells, Hemoglobin gives blood its red color. The optical properties of Hemoglobin vary between its two forms: oxy-Hemoglobin (oxygen-rich) and deoxy-Hemoglobin (oxygen-poor). These forms have distinct absorption peaks in the visible spectrum, contributing to the reddish undertones of skin.
@@ -27,7 +27,7 @@ What gives human skin its diverse colors? When light is transmitted into the ski
 
 In this work, mainly hemoglobin and melanin in the skin are considered. For the other chromophores and their appearance, they are used as residual terms. In Figure\ref{fig:hm_abs}, the spectral absorption coefficients of these two key chromophores are shown. Both types of hemoglobin have high absorption coefficients from 400nm to 450nm and from 520nm to 600nm, giving the skin a pink color appearance. Melanin, on the other hand, absorbs UV and blue-violet more strongly, giving the skin a brown to black appearance.
 
-The formation of skin pigmentations, such as brown spots or red spots, is often associated with an overproduction or uneven distribution of skin chromophores. These pigmentations can result from various factors, including genetic predisposition, hormonal changes, sun exposure, and aging. In response to UV radiation, Melanocytes (melanin-producing cells) increase their production of melanin as a protective mechanism, which can lead to localized darkening of the skin.
+The formation of skin blemishes, such as pigmentations or acnes, is often associated with an overproduction or uneven distribution of skin chromophores. These blemishes can result from various factors, including genetic predisposition, hormonal changes, sun exposure, and aging. In response to UV radiation, Melanocytes (melanin-producing cells) increase their production of melanin as a protective mechanism, which can lead to localized darkening of the skin.
 
 \section{Skin Modeling \& Rendering Techniques}
 
@@ -42,7 +42,7 @@ Modeling skin as a layered, semi-transparent material has become common practice
 
 \begin{enumerate}
     \item \textbf{Specular reflection:} The Figure \ref{fig:skin_model} shows light reflecting off the surface of the skin, as indicated by the bold and yellow arrows labeled \textit{Specular Reflection}. Light reflection from the surface, caused by oils, water, and stratum corneum of the skin. It captures the surface texture of the skin, such as fine grooves and textures. The proposed method preserves these details unaltered.
-    \item \textbf{Subsurface scattering and absorption:} Physiologically, skin is semi-transparent\cite{Igarashi2005TheAO}. Skin constituents such as extra-cellular matrix cause random deflections of incoming light rays, some of which are reflected back to the surface and are observed. This phenomenon is called subsurface scattering. The Figure \ref{fig:skin_model} illustrates how light penetrates the skin layers and scatters within, a process depicted by the dashed lines under the surface. In addition, as shown in Figure \ref{fig:skin_model}, the chromophore components present in the epidermis and dermis layers, such as melanin and heamoglobin, selectively absorb light propagating in the skin, thus rendering the unique hue of human skin. When chromophore is locally accumulated, it will render a blemish where the color is different from the surrounding skin\cite{ANDERSON198113}. The proposed method emphasizes this unique optical phenomenon to achieve realistic pigmentation modelling and editing.
+    \item \textbf{Subsurface scattering and absorption:} Physiologically, skin is semi-transparent\cite{Igarashi2005TheAO}. Skin constituents such as extra-cellular matrix cause random deflections of incoming light rays, some of which are reflected back to the surface and are observed. This phenomenon is called subsurface scattering. The Figure \ref{fig:skin_model} illustrates how light penetrates the skin layers and scatters within, a process depicted by the dashed lines under the surface. In addition, as shown in Figure \ref{fig:skin_model}, the chromophore components present in the epidermis and dermis layers, such as melanin and heamoglobin, selectively absorb light propagating in the skin, thus rendering the unique hue of human skin. When chromophore is locally accumulated, it will render a blemish where the color is different from the surrounding skin\cite{ANDERSON198113}. The proposed method emphasizes this unique optical phenomenon to achieve realistic blemishes modelling and editing.
     \item \textbf{Transmission:} When the light is very strong and shines on thin tissue (such as the ears or fingers under strong light), a unique transmission appearance can be observed against the light source. For blemish change modelling, this aspect is disregarded and do not draw in Figure \ref{fig:skin_model}.
 \end{enumerate}
 
@@ -94,7 +94,7 @@ In this section, the categorization of image content editing methods into three 
 
 \end{itemize}
 
-The proposed method introduces an innovative physical-based model enabling precise, per-spot chromophore concentration modeling and retouching without relying on paired image datasets. This approach, utilizing logarithmic RGB space decomposition, more accurately represents chromophore light absorption. It accounts for blurred blemish edges due to subsurface scattering, enabling seamless integration with the surrounding skin. This method stands out for its unprecedented control over blemish modifications attributed to localized chromophore accumulation, marking a novel advancement in this field.
+The proposed method introduces an innovative physical-based model enabling precise, per-blemish chromophore concentration modeling and retouching without relying on paired image datasets. This approach, utilizing logarithmic RGB space decomposition, more accurately represents chromophore light absorption. It accounts for blurred blemish edges due to subsurface scattering, enabling seamless integration with the surrounding skin. This method stands out for its unprecedented control over blemish modifications attributed to localized chromophore accumulation, marking a novel advancement in this field.
 
 %=== END OF CHAPTER TWO ===
 \end{spacing}
