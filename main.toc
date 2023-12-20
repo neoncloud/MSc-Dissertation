@@ -14,26 +14,26 @@
 \contentsline {section}{\numberline {2.2}Skin Modeling \& Rendering Techniques}{8}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Controllable Facial Image Editing}{11}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Objectives and Definitions}{11}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Dataset and Stability}{11}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Controllability}{12}{subsection.2.3.3}%
-\contentsline {chapter}{\numberline {3}Methods}{14}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Skin Chromophore Color Space Decomposition}{14}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Spot Appearance Modelling \& Editing}{16}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Algorithm Implementations}{19}{subsection.3.2.1}%
-\contentsline {subsubsection}{Preporcessing}{19}{section*.13}%
-\contentsline {subsubsection}{Optimizations in Fitting Process}{19}{section*.14}%
-\contentsline {subsubsection}{GUI Implementations}{21}{section*.15}%
-\contentsline {chapter}{\numberline {4}Experiments}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Dataset}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Experiment Setup}{24}{section.4.2}%
+\contentsline {subsection}{\numberline {2.3.2}Dataset and Stability}{12}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Controllability}{13}{subsection.2.3.3}%
+\contentsline {chapter}{\numberline {3}Methods}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Skin Chromophore Color Space Decomposition}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Spot Appearance Modelling \& Editing}{17}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Algorithm Implementations}{20}{subsection.3.2.1}%
+\contentsline {subsubsection}{Preporcessing}{20}{section*.13}%
+\contentsline {subsubsection}{Optimizations in Fitting Process}{20}{section*.14}%
+\contentsline {subsubsection}{GUI Implementations}{22}{section*.15}%
+\contentsline {chapter}{\numberline {4}Experiments}{24}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Dataset}{24}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Experiment Setup}{25}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Objective Evaluation}{26}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Subjective Evaluation}{26}{subsection.4.2.2}%
-\contentsline {chapter}{\numberline {5}Result \& Discussion}{29}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Versatility}{29}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Reality}{30}{section.5.2}%
+\contentsline {chapter}{\numberline {5}Result \& Discussion}{30}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Versatility}{31}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Reality}{32}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Controllability}{33}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Perception Study}{34}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusion}{36}{chapter.6}%
-\contentsline {chapter}{References}{38}{chapter*.29}%
-\contentsline {chapter}{Appendix \numberline {A}Introduction of Appendix}{44}{appendix.a.A}%
-\contentsline {chapter}{Appendix \numberline {B}Sample Code}{45}{appendix.a.B}%
+\contentsline {chapter}{\numberline {6}Conclusion}{38}{chapter.6}%
+\contentsline {chapter}{References}{40}{chapter*.28}%
+\contentsline {chapter}{Appendix \numberline {A}Introduction of Appendix}{46}{appendix.a.A}%
+\contentsline {chapter}{Appendix \numberline {B}Sample Code}{47}{appendix.a.B}%

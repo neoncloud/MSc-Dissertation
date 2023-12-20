@@ -5,46 +5,49 @@
 \begin{spacing}{1.5}
 \setlength{\parskip}{0.3in}
 \section{Dataset}
-To the best of the authors' knowledge, there is currently no dataset for studies of skin blemish modification and fading. Therefore, a self-collected dataset is adopted for research, development, and testing. The images within the dataset were acquired by two clinical imaging systems (Visia CR4 and OLE, both developed by Canfield Scientific). They were cross-polarized and color-calibrated and had a minimum resolution of 3700$\times$5600. The dataset consists of 223 subjects within the age range of 18 to 45 years, encompassing multi-ethnic consumers with skin tones ranging from dark to tan. The collection period lasted for a duration of up to 3 months during the Summer season with a time step of one week.
+To the best of the authors' knowledge, there is currently no dataset for studies of skin blemish modification and fading. Therefore, a self-collected dataset is adopted for research, development, and testing. The images within the dataset were acquired by two clinical imaging systems (Visia CR4 and OLE, both developed by Canfield Scientific). They were cross-polarized and color-calibrated and had a minimum resolution of 3700$\times$5600. The dataset consists of 223 subjects within the age range of 18 to 45 years, encompassing multi-ethnic consumers with skin tones ranging from dark to tan. The collection period lasted for a duration of up to 3 months during the Summer season with a time step of one week. The summary of the dataset is shown in Table \ref{tbl:dataset_summary}.
 
 In the simulation, images of Week 0 are input and the parameters of the obtained model are adjusted to simulate the change of the blemishes in the following weeks. As shown in Figure\ref{fig:forward}, the input is labelled as \textit{Week 0} and the images for the next few weeks as \textit{+n W}.
 \begin{table}[t!]
     \caption{Summary of Dataset Statistics}
-    \centering
+    \resizebox{\columnwidth}{!}{%
     \begin{tabular}{lrlrlr}
         \toprule
         \multicolumn{2}{c}{\textbf{ITA Score}} & \multicolumn{2}{c}{\textbf{Ethnicity}} & \multicolumn{2}{c}{\textbf{Skin Tone Classification}} \\
         \midrule
         \midrule
-        Total Subjects        & 223   & African       & 126 & Brown         & 132 \\
-        ITA Mean              & 2.58  & Caucasian     & 98  & Dark          & 76  \\
+        Total Subjects        & 223   & African       & 126 & Dark         & 76 \\
+        ITA Mean              & 2.58  & Caucasian     & 98  & Brown          & 132  \\
         ITA Variance          & 851.90 & Indian       & 108 & Intermediate  & 62  \\
                               &       & Latino        & 114 & Light         & 8   \\
                               &       &               &     & Tan           & 152 \\
         \bottomrule
     \end{tabular}
-    \label{tab:dataset_summary}
+    }
+    \label{tbl:dataset_summary}
 \end{table}
 
 \section{Experiment Setup}
 In this study, extensive blemish change simulation experiments are carried out to evaluate the proposed algorithm's effectiveness. Each pigmentation is fitted with 3 Gaussian functions summation and $\sigma=10$ is set for the skin texture layer separation filter. The focus is mainly on the relative concentration changes of the pigmentation, and a series of simulations are conducted based on tuning the concentration parameter after successfully fitting pigmentations.
 
-Inpainting mode of \textbf{Stable Diffusion}(SD)\cite{rombach2021highresolution} and \textbf{Adobe Photoshop}(PS)'s inpainting tool\cite{adobephotoshop} are selected for comparison as baseline models. The former, a top-performing deep learning model, represents the "latent space editing" method discussed. For the SD method, the inpainting mode is used and the text prompt is set as \texttt{skin patch, human face skin, high definition, best quality}. Each test is performed with 50 iterations of sampling using the \texttt{DPM++SDE Karras} sampler, with the random seed fixed to 42. The denoising ratio is adjusted to increase the difference between the generated image and the original so that the intensity of blemish removal is controlled. 
+Inpainting mode of \textbf{Stable Diffusion}(SD)\cite{rombach2021highresolution} and \textbf{Adobe Photoshop}(PS)'s inpainting tool\cite{adobephotoshop} are selected for comparison as baseline models, as shown in Figure \ref{fig:ps_sd}. The former, a top-performing deep learning model, represents the "latent space editing" method discussed. For the SD method, the inpainting mode is used and the text prompt is set as \texttt{skin patch, human face skin, high definition, best quality}, as shown in Figure \ref{fig:sd}. Each test is performed with 50 iterations of sampling using the \texttt{DPM++SDE Karras} sampler, with the random seed fixed to 42. The denoising ratio is adjusted to increase the difference between the generated image and the original so that the intensity of blemish removal is controlled. 
 
-For the PS method, a common image editing software, represents the "pixel space editing" method. Here, the inpainting tool is utilized, selecting and removing blemishes on the original image with \textit{Content-Aware} mode. The modified image is then combined with the original image through Alpha blending. And the degree of blemish removal is adjusted by altering blending opacity.
+For the PS method, a common image editing software, represents the "pixel space editing" method. Here, the inpainting tool is utilized, selecting and removing blemishes on the original image with \textit{Content-Aware} mode, as shown in Figure \ref{fig:ps}. The modified image is then combined with the original image through Alpha blending. And the degree of blemish removal is adjusted by altering blending opacity.
 
 \begin{figure}[t!]
     \centering
     \begin{subfigure}{.97\textwidth}
         \centering
-        \includegraphics[width=0.97\columnwidth]{Chapter4/ps_ui.pdf}
-        \caption{Adobe Photoshop (PS) inpainting tool}
-        % \label{fig:gui1}
+        \includegraphics[width=0.97\columnwidth]{Chapter4/sd_ui.pdf}
+        \caption{Stable Diffusion (SD) inpainting mode}
+        \label{fig:sd}
     \end{subfigure}\hfill
     \begin{subfigure}{.97\textwidth}
         \centering
-        \includegraphics[width=0.97\columnwidth]{Chapter4/sd_ui.pdf}
-        \caption{Stable Diffusion (SD) inpainting mode}
+        \includegraphics[width=0.97\columnwidth]{Chapter4/ps_ui.pdf}
+        \caption{Adobe Photoshop (PS) inpainting tool}
+        \label{fig:ps}
+        % \label{fig:gui1}
     \end{subfigure}
     \caption{Example of a baseline models. Widely available and easily reproducible baseline methods are selected for comparison. Specifically, Adobe Photoshop(PS) is chosen For \textit{pixel space} editing methods, which is the most commonly used image editing and retouching software. For \textit{latent space} editing methods, Stable Diffusion(SD), recognised for its high-quality generation, is selected.}
     \label{fig:ps_sd}
@@ -79,7 +82,7 @@ In the survey, the question asked is \textit{you will see a series of patches fr
     \item Confident that NO spots are modified/reduced (looks very realistic, no unnatural trace of modification at all). (+2)
 \end{itemize}
 
-In the survey, 48 images (24 simulated through the proposed algorithm and 24 unaltered images) are shown to the panellists one image at a time. When the score ranges from 0 to +2, the respondents are considered to be affirming the image as "real" rather than modified.
+In the survey, 48 images (24 simulated through the proposed algorithm and 24 unaltered images) are shown to the panellists one image at a time. When the score ranges from 0 to +2, the respondents are considered to be affirming the image as "real" rather than modified. A sample question in the survey is shown as Figure \ref{fig:sample_form}.
 %=== END OF CHAPTER FOUR ===
 \end{spacing}
 \newpage
