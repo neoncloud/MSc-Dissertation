@@ -35,5 +35,4 @@
 \contentsline {section}{\numberline {5.4}Perception Study}{34}{section.5.4}%
 \contentsline {chapter}{\numberline {6}Conclusion}{38}{chapter.6}%
 \contentsline {chapter}{References}{40}{chapter*.28}%
-\contentsline {chapter}{Appendix \numberline {A}Introduction of Appendix}{46}{appendix.a.A}%
-\contentsline {chapter}{Appendix \numberline {B}Sample Code}{47}{appendix.a.B}%
+\contentsline {chapter}{Appendix \numberline {A}Simulation on Various Skin Tones}{46}{appendix.a.A}%
