@@ -65,11 +65,11 @@ It is reported that there is no significant difference in skin thickness between
 \end{equation}
 
 \section{Blemishes Appearance Modelling \& Editing}
-Given a 3-channel image patch $C(\mathbf{x})\in\mathbb{R}^{3\times h\times w}, \mathbf{x}\in\mathbb{R}^2$ with length $w$ and height $h$, containing a user-selected blemish, we assume it can be divided into normal skin $C_K^{skin}$ and blemish $C_K^{blem}$ in chromophore color space, that is
+Given a 3-channel image patch $C(\mathbf{x})\in\mathbb{R}^{3\times h\times w}, \mathbf{x}\in\mathbb{R}^2$ with length $w$ and height $h$, containing a user-selected blemish, it assumes that the patch can be divided into normal skin $C_K^{skin}$ and blemish $C_K^{blem}$ in chromophore color space, that is
 \begin{equation}
   C_K(\mathbf{x}) = C_K^{skin}(\mathbf{x}) + C_K^{blem}(\mathbf{x}),\quad K\in\{H,M,r\}.
 \end{equation}
-For the estimation of $C_K^{skin}$, we assume that skin color changes are smooth within a local area. Therefore, we fit it with a simple linear model
+For the estimation of $C_K^{skin}$, it assumes that skin color changes are smooth within a local area. Therefore, it can be fitted by a simple linear model
 \begin{equation}
   \hat{C_K^{skin}}(\mathbf{x};\mathbf{k},d)=\mathbf{k}\mathbf{x}+d,\quad\mathbf{k}\in\mathbb{R}^2, d\in\mathbb{R}.
 \end{equation}

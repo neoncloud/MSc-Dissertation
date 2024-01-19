@@ -1,0 +1,90 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: Title/coverpage.aux
+A level-1 auxiliary file: Title/titlepage.aux
+A level-1 auxiliary file: Title/SoO.aux
+A level-1 auxiliary file: Title/SDS.aux
+A level-1 auxiliary file: Title/AAS.aux
+A level-1 auxiliary file: Front/Abstract.aux
+A level-1 auxiliary file: Front/Acronyms.aux
+A level-1 auxiliary file: Front/Symbols.aux
+A level-1 auxiliary file: Chapter1/Chapter1.aux
+A level-1 auxiliary file: Chapter2/Chapter2.aux
+A level-1 auxiliary file: Chapter3/Chapter3.aux
+A level-1 auxiliary file: Chapter4/Chapter4.aux
+A level-1 auxiliary file: Chapter5/Chapter5.aux
+A level-1 auxiliary file: Chapter6/Chapter6.aux
+The style file: unsrt.bst
+A level-1 auxiliary file: Appendix/appendix.aux
+Database file #1: Ref/References.bib
+Warning--entry type for "adobephotoshop" isn't style-file defined
+--line 151 of file Ref/References.bib
+Warning--entry type for "newville_matthew_2014_11813" isn't style-file defined
+--line 618 of file Ref/References.bib
+Warning--empty year in krishnapriyaAnalysisManualAutomated2022a
+Warning--empty year in xieBlemishawareProgressiveFace2023
+Warning--empty journal in linExemplarbasedFreckleRetouching2019
+Warning--empty year in linExemplarbasedFreckleRetouching2019
+Warning--empty year in shafaeiAutoRetouchAutomaticProfessional2021
+Warning--empty journal in goodfellowGenerativeAdversarialNetworks2014
+Warning--empty year in goodfellowGenerativeAdversarialNetworks2014
+Warning--empty journal in alalufEthnicVariationMelanin2002a
+Warning--empty year in alalufEthnicVariationMelanin2002a
+Warning--empty booktitle in doiSpectralEstimationHuman2003
+Warning--empty year in doiSpectralEstimationHuman2003
+Warning--empty booktitle in Igarashi2005TheAO
+Warning--empty publisher in chiang2016practical
+Warning--empty chapter and pages in 10.1145/3596711.3596747
+Warning--empty journal in beharaSkinLesionSynthesis2023
+Warning--empty year in beharaSkinLesionSynthesis2023
+Warning--empty year in lipowezkyAutomaticFrecklesDetection2008
+Warning--empty year in velusamyFabSoftenFaceBeautification2020
+Warning--empty year in heGuidedImageFiltering2010
+Warning--empty year in liuAutomaticBeautificationGroupPhoto2018
+Warning--empty journal in jungDeepLearningbasedOptical2023a
+Warning--empty year in jungDeepLearningbasedOptical2023a
+Warning--empty journal in tsumuraImagebasedSkinColor
+Warning--empty year in tsumuraImagebasedSkinColor
+You've used 47 entries,
+            1791 wiz_defined-function locations,
+            759 strings with 15420 characters,
+and the built_in function-call counts, 13818 in all, are:
+= -- 1192
+> -- 713
+< -- 20
++ -- 252
+- -- 205
+* -- 920
+:= -- 2045
+add.period$ -- 155
+call.type$ -- 47
+change.case$ -- 47
+chr.to.int$ -- 0
+cite$ -- 71
+duplicate$ -- 668
+empty$ -- 1305
+format.name$ -- 205
+if$ -- 3200
+int.to.chr$ -- 0
+int.to.str$ -- 47
+missing$ -- 45
+newline$ -- 234
+num.names$ -- 55
+pop$ -- 221
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 396
+stack$ -- 0
+substring$ -- 819
+swap$ -- 242
+text.length$ -- 20
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 24
+while$ -- 118
+width$ -- 49
+write$ -- 502
+(There were 26 warnings)
