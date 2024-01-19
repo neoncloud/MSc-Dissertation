@@ -5,9 +5,12 @@
 \begin{spacing}{1.5}
 \setlength{\parskip}{0.3in}
 \section{Dataset}
-To the best of the authors' knowledge, there is currently no dataset for studies of skin blemish modification and fading. Therefore, a self-collected dataset is adopted for research, development, and testing. The images within the dataset were acquired by two clinical imaging systems (Visia CR4 and OLE, both developed by Canfield Scientific). They were cross-polarized and color-calibrated and had a minimum resolution of 3700$\times$5600. The dataset consists of 223 subjects within the age range of 18 to 45 years, encompassing multi-ethnic consumers with skin tones ranging from dark to tan. The collection period lasted for a duration of up to 3 months during the Summer season with a time step of one week. The summary of the dataset is shown in Table \ref{tbl:dataset_summary}.
+To the best of the authors' knowledge, there is currently no dataset for studies of skin blemish modification and fading. Therefore, a self-collected dataset is adopted for research, development, and testing. The images within the dataset were acquired by two clinical imaging systems (Visia CR4 and OLE, both developed by Canfield Scientific). They were cross-polarized and color-calibrated and had a minimum resolution of $3700 \times 5600$. The dataset consists of 223 subjects within the age range of 18 to 45 years, encompassing multi-ethnic consumers with skin tones ranging from dark to light, quantitatively assessed using the Individual Typology Angle (ITA), visualized in Figure \ref{fig:ita}. The ITA for each subject is calculated using the formula:
+\begin{equation}
+\text{ITA} = \arctan\left(\frac{L* - 50}{b*}\right) \times \frac{180}{\pi},
+\end{equation}
+where $L*$ and $b*$ are coordinates from the CIE-LAB color space representing the lightness and the chromaticity on the yellow/blue axis, respectively. This measure provides a valuable tool for analyzing skin tone diversity in the dataset. The collection period lasted for a duration of up to 3 months during the Summer season with a time step of one week. The summary of the dataset is shown in Table \ref{tbl:dataset_summary}. In the simulation, images of Week 0 are input and the parameters of the obtained model are adjusted to simulate the change of the blemishes in the following weeks. As shown in Figure\ref{fig:forward}, the input is labelled as \textit{Week 0} and the images for the next few weeks as \textit{+n W}.
 
-In the simulation, images of Week 0 are input and the parameters of the obtained model are adjusted to simulate the change of the blemishes in the following weeks. As shown in Figure\ref{fig:forward}, the input is labelled as \textit{Week 0} and the images for the next few weeks as \textit{+n W}.
 \begin{table}[t!]
     \caption{Summary of Dataset Statistics}
     \resizebox{\columnwidth}{!}{%
@@ -18,14 +21,20 @@ In the simulation, images of Week 0 are input and the parameters of the obtained
         \midrule
         Total Subjects        & 223   & African       & 126 & Dark         & 76 \\
         ITA Mean              & 2.58  & Caucasian     & 98  & Brown          & 132  \\
-        ITA Variance          & 851.90 & Indian       & 108 & Intermediate  & 62  \\
-                              &       & Latino        & 114 & Light         & 8   \\
-                              &       &               &     & Tan           & 152 \\
+        ITA Variance          & 851.90 & Indian       & 108 & Tan           & 152 \\
+                              &       & Latino        & 114 & Intermediate  & 62 \\
+                              &       &               &     & Light         & 8   \\
         \bottomrule
     \end{tabular}
     }
     \label{tbl:dataset_summary}
 \end{table}
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=0.97\columnwidth]{Chapter4/ITA.jpg}
+    \caption{Visualisation of ITA classification threshold within the L* and b* color space, used for determining skin tone categories. The left side shows the skin color volume on the L*-b* plane with indicative angles for various skin tones, while the right side presents specific ITA ranges with corresponding skin rone classifications from I (very light) to VI (dark). Our dataset encompasses a diverse spectrum of skin tones, including categories from dark (Skin Type VI) to light (Skin Type II). Image taken from \cite{krishnapriyaAnalysisManualAutomated2022a}.}
+    \label{fig:ita}
+\end{figure}
 
 \section{Experiment Setup}
 In this study, extensive blemish change simulation experiments are carried out to evaluate the proposed algorithm's effectiveness. Each blemishes is fitted with 3 Gaussian functions summation and $\sigma=10$ is set for the skin texture layer separation filter. The focus is mainly on the relative concentration changes of the blemishes, and a series of simulations are conducted based on tuning the concentration parameter after successfully fitting blemishes.

@@ -1,1 +1,8 @@
-Chapter5\*.pptx
+*.pptx
+*.aux
+Appendix/appendix.aux
+Chapter1/Chapter1.aux
+Chapter2/Chapter2.aux
+Chapter3/Chapter3.aux
+Chapter4/Chapter4.aux
+Chapter5/Chapter5.aux

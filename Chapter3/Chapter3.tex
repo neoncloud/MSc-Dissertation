@@ -48,7 +48,14 @@ or in matrix form
     \mathbf{k}=\begin{bmatrix}R^\mathcal{R} \\R^\mathcal{G} \\R^\mathcal{B}\end{bmatrix}.
 \end{gather*}
 
-It is reported that there is no significant difference in skin thickness between human races\cite{Whitmore2000}. In other words, $l$ can be seen as a constant. So $l$ is combined with $\epsilon$ in $\mathbf{E}$. Following the practice of Tsumura et al.\cite{tsumura1999independent}, $E$ is estimated by Fast Independent Component Analysis (FastICA)\cite{HYVARINEN2000411} in the log-RGB domain. Specifically, 128 patches are randomly sampled from each face skin image of the dataset, and each patch is 16x16 pixels in size. Then the average RGB value of each patch is calculated. The FastICA algorithm in \texttt{sklearn}\cite{scikit-learn} is adopted to estimate the 3 independent components over the log-RGB domain as $\mathbf{E}$. In this work, $\hat{\mathbf{E}}$ is obtained as follows:
+\begin{figure}[t]
+    \centering
+    \includegraphics{Chapter3/original_data_rounded_plot.png}
+    \caption{3D scatter plot showing the distribution of skin colors sampled from the face skin images in a dataset, illustrating the correlation between the R, G, and B channels}
+    \label{fig:3dplot}
+\end{figure}
+
+It is reported that there is no significant difference in skin thickness between human races\cite{Whitmore2000}. In other words, $l$ can be seen as a constant. So $l$ is combined with $\epsilon$ in $\mathbf{E}$. Following the practice of Tsumura et al.\cite{tsumura1999independent}, $E$ is estimated by Fast Independent Component Analysis (FastICA)\cite{HYVARINEN2000411} in the log-RGB domain. Specifically, 128 patches are randomly sampled from each face skin image of the dataset, and each patch is 16x16 pixels in size. Then the average RGB value of each patch is calculated, as illustrated in Figure\ref{fig:3dplot}. The FastICA algorithm in \texttt{sklearn}\cite{scikit-learn} is adopted to estimate the 3 independent components over the log-RGB domain as $\mathbf{E}$. In this work, $\hat{\mathbf{E}}$ is obtained as follows:
 \begin{equation}
     \hat{\mathbf{E}} = \begin{bmatrix}
         0.96  & -0.63 & 0.9  \\
@@ -158,24 +165,15 @@ This algorithm can be represented by the following pseudocode.
     \State \textbf{Return:} Fitted parameters and modified blemish image
     \end{algorithmic}
     \end{algorithm}
-\subsubsection{GUI Implementations}
+
 \begin{figure}[t!]
     \centering
-    % \begin{subfigure}{.95\textwidth}
-    %     \centering
-    %     \includegraphics[width=0.95\columnwidth]{Chapter3/GUI1.pdf}
-    %     % \caption{Use}
-    %     % \label{fig:gui1}
-    % \end{subfigure}\hfill
-    % \begin{subfigure}{.95\textwidth}
-    %     \centering
-    %     \includegraphics[width=0.95\columnwidth]{Chapter3/GUI2.pdf}
-    %     % \caption{Bar chart of survey results}
-    % \end{subfigure}
-    \includegraphics[width=0.95\columnwidth]{Chapter3/GUI.pdf}
+    \includegraphics[width=0.93\columnwidth]{Chapter3/GUI.pdf}
     \caption{An Overview of GUI}
     \label{fig:gui}
 \end{figure}
+\subsubsection{GUI Implementations}
+\vspace{-1.2em}
 As shown in Figure\ref{fig:gui}, a simple graphical user interface (GUI) is also created to facilitate the editing of facial images by users with varying levels of expertise. The GUI is organized into several sections, each providing tools for specific tasks in the editing process.
 \begin{itemize}
     \item \textbf{Image Upload and Blemish Selection} The initial interaction with the interface is the image upload functionality, denoted by circled numeral 1 in Figure \ref{fig:gui}. Users can upload the facial image they intend to edit. Following the upload, the image is displayed within the central work area of the GUI, allowing users to identify and select skin blemishes for removal or modification. This selection process is designed to be intuitive, employing a simple point-and-click mechanism to mark areas of interest, as indicated by circled numeral 2.

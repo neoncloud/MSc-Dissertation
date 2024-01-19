@@ -7,6 +7,12 @@ Craig Donner and Henrik~Wann Jensen.
   Techniques}, EGSR '06, page 409–417, Goslar, DEU, 2006. Eurographics
   Association.
 
+\bibitem{krishnapriyaAnalysisManualAutomated2022a}
+K.~S. Krishnapriya, Gabriella Pangelinan, Michael~C. King, and Kevin~W. Bowyer.
+\newblock Analysis of {{Manual}} and {{Automated Skin Tone Assignments}}.
+\newblock In {\em 2022 {{IEEE}}/{{CVF Winter Conference}} on {{Applications}}
+  of {{Computer Vision Workshops}} ({{WACVW}})}, pages 429--438. {IEEE}.
+
 \bibitem{adobephotoshop}
 {Adobe Inc.}
 \newblock Adobe photoshop.
@@ -22,6 +28,25 @@ Ling Li, Bandara Dissanayake, Tatsuya Omotezako, Yunjie Zhong, Qing Zhang,
 \newblock Evaluating the efficacy of skincare product: A realistic short-term
   facial pore simulation.
 \newblock {\em Electronic Imaging}, 35(7):276--1--276--1, 2023.
+
+\bibitem{xieBlemishawareProgressiveFace2023}
+Lianxin Xie, Wen Xue, Zhen Xu, Si~Wu, Zhiwen Yu, and Hau~San Wong.
+\newblock Blemish-aware and {{Progressive Face Retouching}} with {{Limited
+  Paired Data}}.
+\newblock In {\em 2023 {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and
+  {{Pattern Recognition}} ({{CVPR}})}, pages 5599--5608. {IEEE}.
+
+\bibitem{linExemplarbasedFreckleRetouching2019}
+Tsung-Ying Lin, Yu-Ting Tsai, Tsung-Shian Huang, Wen-Chieh Lin, and Jung-Hong
+  Chuang.
+\newblock Exemplar-based freckle retouching and skin tone adjustment.
+\newblock 78:54--63.
+
+\bibitem{shafaeiAutoRetouchAutomaticProfessional2021}
+Alireza Shafaei, James~J. Little, and Mark Schmidt.
+\newblock {{AutoRetouch}}: {{Automatic Professional Face Retouching}}.
+\newblock In {\em 2021 {{IEEE Winter Conference}} on {{Applications}} of
+  {{Computer Vision}} ({{WACV}})}, pages 989--997. {IEEE}.
 
 \bibitem{goodfellowGenerativeAdversarialNetworks2014}
 Ian~J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David
@@ -210,13 +235,6 @@ Kaiming He, Jian Sun, and Xiaoou Tang.
   {\em Computer {{Vision}} – {{ECCV}} 2010}, Lecture {{Notes}} in {{Computer
   Science}}, pages 1--14. {Springer}.
 
-\bibitem{xieBlemishawareProgressiveFace2023}
-Lianxin Xie, Wen Xue, Zhen Xu, Si~Wu, Zhiwen Yu, and Hau~San Wong.
-\newblock Blemish-aware and {{Progressive Face Retouching}} with {{Limited
-  Paired Data}}.
-\newblock In {\em 2023 {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and
-  {{Pattern Recognition}} ({{CVPR}})}, pages 5599--5608. {IEEE}.
-
 \bibitem{liuAutomaticBeautificationGroupPhoto2018}
 Ji~Liu, Shuai Li, Wenfeng Song, Liang Liu, Hong Qin, and Aimin Hao.
 \newblock Automatic {{Beautification}} for {{Group-Photo Facial Expressions
@@ -239,17 +257,11 @@ Norimichi Tsumura, Nobutoshi Ojima, Kayoko Sato, Mitsuhiro Shiraishi, Hideto
   hemoglobin and melanin information in the skin.
 \newblock page~10.
 
-\bibitem{linExemplarbasedFreckleRetouching2019}
-Tsung-Ying Lin, Yu-Ting Tsai, Tsung-Shian Huang, Wen-Chieh Lin, and Jung-Hong
-  Chuang.
-\newblock Exemplar-based freckle retouching and skin tone adjustment.
-\newblock 78:54--63.
-
 \bibitem{Whitmore2000}
 S.Elizabeth Whitmore and N.Joan~Glavan Sago.
 \newblock Caliper-measured skin thickness is similar in white and black women.
 \newblock {\em Journal of the American Academy of Dermatology}, 42(1):76–79,
-  January 2000.
+  2000.
 
 \bibitem{tsumura1999independent}
 Norimichi Tsumura, Hideaki Haneishi, and Yoichi Miyake.

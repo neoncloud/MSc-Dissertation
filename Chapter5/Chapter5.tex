@@ -33,25 +33,41 @@ Fréchet Inception Distance (FID) scores for the simulated images and the ground
 \begin{figure}[t!]
     \centering
     \begin{subfigure}{\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{Chapter5/baseline/baseline41.pdf}
+        \begin{minipage}[c]{.15\textwidth}
+            \caption*{Light}
+        \end{minipage}%
+        \begin{minipage}[c]{.85\textwidth}
+            \includegraphics[width=\linewidth]{Chapter5/baseline/baseline41.pdf}
+        \end{minipage}
     \end{subfigure}
     \hfill
     \begin{subfigure}{\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{Chapter5/baseline/baseline42.pdf}
+        \begin{minipage}[c]{.15\textwidth}
+            \caption*{Tan}
+        \end{minipage}%
+        \begin{minipage}[c]{.85\textwidth}
+            \includegraphics[width=\linewidth]{Chapter5/baseline/baseline42.pdf}
+        \end{minipage}
     \end{subfigure}
     \hfill
     \begin{subfigure}{\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{Chapter5/baseline/baseline43.pdf}
+        \begin{minipage}[c]{.15\textwidth}
+            \caption*{Brown}
+        \end{minipage}%
+        \begin{minipage}[c]{.85\textwidth}
+            \includegraphics[width=\linewidth]{Chapter5/baseline/baseline43.pdf}
+        \end{minipage}
     \end{subfigure}
     \hfill
     \begin{subfigure}{\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{Chapter5/baseline/baseline44.pdf}
+        \begin{minipage}[c]{.15\textwidth}
+            \caption*{Dark}
+        \end{minipage}%
+        \begin{minipage}[c]{.85\textwidth}
+            \includegraphics[width=\linewidth]{Chapter5/baseline/baseline44.pdf}
+        \end{minipage}
     \end{subfigure}
-    \caption{Comparison with baseline methods. The results of several blemish removal or modification methods are compared, including the proposed method in question (marked as Ours), Adobe Photoshop\cite{adobephotoshop} inpainting (marked as PS), and Stable Diffusion\cite{rombach2021highresolution} inpainting (marked as SD). Arrows are manually added to highlight areas of interest. Note the red arrows where the PS produces over-smoothed skin patches and the SD produces visible artifacts. For darker skin tones, the SD method fails to simulate varying intermediate states of blemish removal, displaying similar results under different control intensities.}
+    \caption{Comparison with baseline methods on various skin tones. The results of several blemish removal or modification methods are compared, including the proposed method (marked as Proposed), Adobe Photoshop\cite{adobephotoshop} inpainting (marked as PS), and Stable Diffusion\cite{rombach2021highresolution} inpainting (marked as SD). Arrows are manually added to highlight areas of interest. Note the red arrows where the PS produces over-smoothed skin patches and the SD produces visible artifacts. For darker skin tones, the SD method fails to simulate varying intermediate states of blemish removal, displaying similar results under different control intensities.}
     \label{fig:baseline}
 \end{figure}
 
