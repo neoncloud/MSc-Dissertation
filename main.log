@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.6)  19 JAN 2024 23:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.6)  20 JAN 2024 11:44
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -845,36 +845,21 @@ l.14
       [1
 
 
-]
-Overfull \hbox (2.40356pt too wide) in paragraph at lines 17--18
-\OT1/ptm/m/n/12 though some al-go-rithms cur-rently fo-cused on fa-cial im-age re-touch-ing and achiev-
- []
-
-[2]
-Overfull \hbox (7.05968pt too wide) in paragraph at lines 26--27
-\OT1/ptm/m/n/12 sim-u-lat-ing skin acne and pig-men-ta-tion changes is pro-posed. The pro-posed method
- []
-
-[3]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 36.
+] [2] [3]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 39.
  (d:/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Overfull \hbox (2.6779pt too wide) in paragraph at lines 36--37
+Overfull \hbox (2.6779pt too wide) in paragraph at lines 39--40
 []\OT1/ptm/m/n/12 The prob-lem of blem-ish change sim-u-la-tion is iden-ti-fied, uti-liz-ing a physics-
  []
 
-[4]
-Overfull \hbox (7.80232pt too wide) in paragraph at lines 48--49
-\OT1/ptm/m/n/12 novel physics-based mod-elling ap-proach and its im-ple-men-ta-tion. This model,
- []
-
-[5] [6])
+[4] [5] [6])
 \openout2 = `Chapter2/Chapter2.aux'.
 
  (./Chapter2/Chapter2.tex
 Chapter 2.
-<Chapter2/HM_abs.png, id=403, 216.81pt x 151.767pt>
+<Chapter2/HM_abs.png, id=406, 216.81pt x 151.767pt>
 File: Chapter2/HM_abs.png Graphic file (type png)
 <use Chapter2/HM_abs.png>
 Package pdftex.def Info: Chapter2/HM_abs.png  used on input line 14.
@@ -897,7 +882,7 @@ Overfull \hbox (3.99963pt too wide) in paragraph at lines 22--23
 ] [8 <./Chapter2/HM_abs.png>]
 
 pdfTeX warning: pdflatex.exe (file ./Chapter2/skin_model2.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter2/skin_model2.pdf, id=424, 716.9174pt x 394.46542pt>
+<Chapter2/skin_model2.pdf, id=427, 716.9174pt x 394.46542pt>
 File: Chapter2/skin_model2.pdf Graphic file (type pdf)
 <use Chapter2/skin_model2.pdf>
 Package pdftex.def Info: Chapter2/skin_model2.pdf  used on input line 36.
@@ -920,7 +905,7 @@ Chapter 3.
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter3/system.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter3/system.pdf, id=620, 1905.0637pt x 540.91385pt>
+<Chapter3/system.pdf, id=622, 1905.0637pt x 540.91385pt>
 File: Chapter3/system.pdf Graphic file (type pdf)
 <use Chapter3/system.pdf>
 Package pdftex.def Info: Chapter3/system.pdf  used on input line 10.
@@ -941,7 +926,7 @@ Overfull \hbox (26.41599pt too wide) in paragraph at lines 25--26
 
 
 ] [17 <./Chapter3/system.pdf>]
-<Chapter3/original_data_rounded_plot.png, id=689, 341.1144pt x 308.23155pt>
+<Chapter3/original_data_rounded_plot.png, id=691, 341.1144pt x 308.23155pt>
 File: Chapter3/original_data_rounded_plot.png Graphic file (type png)
 <use Chapter3/original_data_rounded_plot.png>
 Package pdftex.def Info: Chapter3/original_data_rounded_plot.png  used on input line 53.
@@ -958,7 +943,7 @@ Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on inp
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter3/GUI.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter3/GUI.pdf, id=736, 472.26437pt x 692.08563pt>
+<Chapter3/GUI.pdf, id=738, 472.26437pt x 692.08563pt>
 File: Chapter3/GUI.pdf Graphic file (type pdf)
 <use Chapter3/GUI.pdf>
 Package pdftex.def Info: Chapter3/GUI.pdf  used on input line 171.
@@ -974,7 +959,7 @@ Chapter 4.
 
 
 ]
-<Chapter4/ITA.jpg, id=784, 248.4858pt x 166.06723pt>
+<Chapter4/ITA.jpg, id=786, 248.4858pt x 166.06723pt>
 File: Chapter4/ITA.jpg Graphic file (type jpg)
 <use Chapter4/ITA.jpg>
 Package pdftex.def Info: Chapter4/ITA.jpg  used on input line 34.
@@ -987,7 +972,7 @@ Overfull \hbox (4.47pt too wide) in paragraph at lines 42--43
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter4/sd_ui.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter4/sd_ui.pdf, id=796, 485.18677pt x 211.54031pt>
+<Chapter4/sd_ui.pdf, id=798, 485.18677pt x 211.54031pt>
 File: Chapter4/sd_ui.pdf Graphic file (type pdf)
 <use Chapter4/sd_ui.pdf>
 Package pdftex.def Info: Chapter4/sd_ui.pdf  used on input line 50.
@@ -995,7 +980,7 @@ Package pdftex.def Info: Chapter4/sd_ui.pdf  used on input line 50.
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter4/ps_ui.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter4/ps_ui.pdf, id=797, 473.51817pt x 384.68617pt>
+<Chapter4/ps_ui.pdf, id=799, 473.51817pt x 384.68617pt>
 File: Chapter4/ps_ui.pdf Graphic file (type pdf)
 <use Chapter4/ps_ui.pdf>
 Package pdftex.def Info: Chapter4/ps_ui.pdf  used on input line 56.
@@ -1016,12 +1001,12 @@ Overfull \hbox (8.16852pt too wide) in paragraph at lines 69--72
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter4/metadata.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter4/metadata.pdf, id=837, 599.74063pt x 307.64937pt>
+<Chapter4/metadata.pdf, id=839, 599.74063pt x 307.64937pt>
 File: Chapter4/metadata.pdf Graphic file (type pdf)
 <use Chapter4/metadata.pdf>
 Package pdftex.def Info: Chapter4/metadata.pdf  used on input line 75.
 (pdftex.def)             Requested size: 391.93546pt x 201.05411pt.
-<Chapter4/sample_form1.png, id=838, 370.38374pt x 485.24142pt>
+<Chapter4/sample_form1.png, id=840, 370.38374pt x 485.24142pt>
 File: Chapter4/sample_form1.png Graphic file (type png)
 <use Chapter4/sample_form1.png>
 Package pdftex.def Info: Chapter4/sample_form1.png  used on input line 81.
@@ -1039,7 +1024,7 @@ Chapter 5.
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/img_comp6.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter5/img_comp6.pdf, id=919, 938.0083pt x 581.92609pt>
+<Chapter5/img_comp6.pdf, id=921, 938.0083pt x 581.92609pt>
 File: Chapter5/img_comp6.pdf Graphic file (type pdf)
 <use Chapter5/img_comp6.pdf>
 Package pdftex.def Info: Chapter5/img_comp6.pdf  used on input line 9.
@@ -1052,7 +1037,7 @@ Package pdftex.def Info: Chapter5/img_comp6.pdf  used on input line 9.
  <./Chapter5/img_comp6.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/forward3.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter5/forward3.pdf, id=966, 1225.5785pt x 635.37675pt>
+<Chapter5/forward3.pdf, id=968, 1225.5785pt x 635.37675pt>
 File: Chapter5/forward3.pdf Graphic file (type pdf)
 <use Chapter5/forward3.pdf>
 Package pdftex.def Info: Chapter5/forward3.pdf  used on input line 26.
@@ -1065,7 +1050,7 @@ Overfull \hbox (0.26672pt too wide) in paragraph at lines 30--31
 [34 <./Chapter5/forward3.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/baseline/baseline41.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter5/baseline/baseline41.pdf, id=1007, 1024.30678pt x 390.71832pt>
+<Chapter5/baseline/baseline41.pdf, id=1009, 1024.30678pt x 390.71832pt>
 File: Chapter5/baseline/baseline41.pdf Graphic file (type pdf)
 <use Chapter5/baseline/baseline41.pdf>
 Package pdftex.def Info: Chapter5/baseline/baseline41.pdf  used on input line 40.
@@ -1073,7 +1058,7 @@ Package pdftex.def Info: Chapter5/baseline/baseline41.pdf  used on input line 40
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/baseline/baseline42.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter5/baseline/baseline42.pdf, id=1008, 1024.30678pt x 337.26172pt>
+<Chapter5/baseline/baseline42.pdf, id=1010, 1024.30678pt x 337.26172pt>
 File: Chapter5/baseline/baseline42.pdf Graphic file (type pdf)
 <use Chapter5/baseline/baseline42.pdf>
 Package pdftex.def Info: Chapter5/baseline/baseline42.pdf  used on input line 49.
@@ -1081,7 +1066,7 @@ Package pdftex.def Info: Chapter5/baseline/baseline42.pdf  used on input line 49
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/baseline/baseline43.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter5/baseline/baseline43.pdf, id=1009, 1024.30678pt x 336.5089pt>
+<Chapter5/baseline/baseline43.pdf, id=1011, 1024.30678pt x 336.5089pt>
 File: Chapter5/baseline/baseline43.pdf Graphic file (type pdf)
 <use Chapter5/baseline/baseline43.pdf>
 Package pdftex.def Info: Chapter5/baseline/baseline43.pdf  used on input line 58.
@@ -1089,7 +1074,7 @@ Package pdftex.def Info: Chapter5/baseline/baseline43.pdf  used on input line 58
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/baseline/baseline44.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter5/baseline/baseline44.pdf, id=1010, 1024.07594pt x 336.80359pt>
+<Chapter5/baseline/baseline44.pdf, id=1012, 1024.07594pt x 336.80359pt>
 File: Chapter5/baseline/baseline44.pdf Graphic file (type pdf)
 <use Chapter5/baseline/baseline44.pdf>
 Package pdftex.def Info: Chapter5/baseline/baseline44.pdf  used on input line 67.
@@ -1102,7 +1087,7 @@ Overfull \hbox (5.42648pt too wide) in paragraph at lines 32--73
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/grid.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter5/grid.pdf, id=1015, 963.6pt x 963.6pt>
+<Chapter5/grid.pdf, id=1017, 963.6pt x 963.6pt>
 File: Chapter5/grid.pdf Graphic file (type pdf)
 <use Chapter5/grid.pdf>
 Package pdftex.def Info: Chapter5/grid.pdf  used on input line 90.
@@ -1117,12 +1102,12 @@ pdfTeX warning: pdflatex.exe (file ./Chapter5/baseline/baseline43.pdf): PDF incl
 
 pdfTeX warning: pdflatex.exe (file ./Chapter5/baseline/baseline44.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] [37 <./Chapter5/grid.pdf>]
-<Chapter5/score.pdf, id=1500, 777.47667pt x 398.05481pt>
+<Chapter5/score.pdf, id=1502, 777.47667pt x 398.05481pt>
 File: Chapter5/score.pdf Graphic file (type pdf)
 <use Chapter5/score.pdf>
 Package pdftex.def Info: Chapter5/score.pdf  used on input line 107.
 (pdftex.def)             Requested size: 372.33748pt x 190.62682pt.
-<Chapter5/bar_charts_modified.pdf, id=1501, 867.24pt x 361.35pt>
+<Chapter5/bar_charts_modified.pdf, id=1503, 867.24pt x 361.35pt>
 File: Chapter5/bar_charts_modified.pdf Graphic file (type pdf)
 <use Chapter5/bar_charts_modified.pdf>
 Package pdftex.def Info: Chapter5/bar_charts_modified.pdf  used on input line 113.
@@ -1157,7 +1142,7 @@ Appendix A.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/1.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/1.pdf, id=1637, 963.6pt x 542.025pt>
+<Appendix/img/1.pdf, id=1639, 963.6pt x 542.025pt>
 File: Appendix/img/1.pdf Graphic file (type pdf)
 <use Appendix/img/1.pdf>
 Package pdftex.def Info: Appendix/img/1.pdf  used on input line 16.
@@ -1165,7 +1150,7 @@ Package pdftex.def Info: Appendix/img/1.pdf  used on input line 16.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/2.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/2.pdf, id=1638, 963.6pt x 542.025pt>
+<Appendix/img/2.pdf, id=1640, 963.6pt x 542.025pt>
 File: Appendix/img/2.pdf Graphic file (type pdf)
 <use Appendix/img/2.pdf>
 Package pdftex.def Info: Appendix/img/2.pdf  used on input line 21.
@@ -1173,7 +1158,7 @@ Package pdftex.def Info: Appendix/img/2.pdf  used on input line 21.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/3.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/3.pdf, id=1639, 963.6pt x 542.025pt>
+<Appendix/img/3.pdf, id=1641, 963.6pt x 542.025pt>
 File: Appendix/img/3.pdf Graphic file (type pdf)
 <use Appendix/img/3.pdf>
 Package pdftex.def Info: Appendix/img/3.pdf  used on input line 26.
@@ -1181,7 +1166,7 @@ Package pdftex.def Info: Appendix/img/3.pdf  used on input line 26.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/4.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/4.pdf, id=1640, 963.6pt x 542.025pt>
+<Appendix/img/4.pdf, id=1642, 963.6pt x 542.025pt>
 File: Appendix/img/4.pdf Graphic file (type pdf)
 <use Appendix/img/4.pdf>
 Package pdftex.def Info: Appendix/img/4.pdf  used on input line 31.
@@ -1189,7 +1174,7 @@ Package pdftex.def Info: Appendix/img/4.pdf  used on input line 31.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/5.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/5.pdf, id=1641, 963.6pt x 542.025pt>
+<Appendix/img/5.pdf, id=1643, 963.6pt x 542.025pt>
 File: Appendix/img/5.pdf Graphic file (type pdf)
 <use Appendix/img/5.pdf>
 Package pdftex.def Info: Appendix/img/5.pdf  used on input line 36.
@@ -1197,7 +1182,7 @@ Package pdftex.def Info: Appendix/img/5.pdf  used on input line 36.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/6.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/6.pdf, id=1642, 963.6pt x 542.025pt>
+<Appendix/img/6.pdf, id=1644, 963.6pt x 542.025pt>
 File: Appendix/img/6.pdf Graphic file (type pdf)
 <use Appendix/img/6.pdf>
 Package pdftex.def Info: Appendix/img/6.pdf  used on input line 41.
@@ -1205,7 +1190,7 @@ Package pdftex.def Info: Appendix/img/6.pdf  used on input line 41.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/7.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/7.pdf, id=1643, 963.6pt x 542.025pt>
+<Appendix/img/7.pdf, id=1645, 963.6pt x 542.025pt>
 File: Appendix/img/7.pdf Graphic file (type pdf)
 <use Appendix/img/7.pdf>
 Package pdftex.def Info: Appendix/img/7.pdf  used on input line 48.
@@ -1213,7 +1198,7 @@ Package pdftex.def Info: Appendix/img/7.pdf  used on input line 48.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/8.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/8.pdf, id=1644, 963.6pt x 542.025pt>
+<Appendix/img/8.pdf, id=1646, 963.6pt x 542.025pt>
 File: Appendix/img/8.pdf Graphic file (type pdf)
 <use Appendix/img/8.pdf>
 Package pdftex.def Info: Appendix/img/8.pdf  used on input line 53.
@@ -1221,7 +1206,7 @@ Package pdftex.def Info: Appendix/img/8.pdf  used on input line 53.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/9.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/9.pdf, id=1645, 963.6pt x 542.025pt>
+<Appendix/img/9.pdf, id=1647, 963.6pt x 542.025pt>
 File: Appendix/img/9.pdf Graphic file (type pdf)
 <use Appendix/img/9.pdf>
 Package pdftex.def Info: Appendix/img/9.pdf  used on input line 58.
@@ -1229,7 +1214,7 @@ Package pdftex.def Info: Appendix/img/9.pdf  used on input line 58.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/10.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/10.pdf, id=1646, 963.6pt x 542.025pt>
+<Appendix/img/10.pdf, id=1648, 963.6pt x 542.025pt>
 File: Appendix/img/10.pdf Graphic file (type pdf)
 <use Appendix/img/10.pdf>
 Package pdftex.def Info: Appendix/img/10.pdf  used on input line 63.
@@ -1237,7 +1222,7 @@ Package pdftex.def Info: Appendix/img/10.pdf  used on input line 63.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/11.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/11.pdf, id=1647, 963.6pt x 542.025pt>
+<Appendix/img/11.pdf, id=1649, 963.6pt x 542.025pt>
 File: Appendix/img/11.pdf Graphic file (type pdf)
 <use Appendix/img/11.pdf>
 Package pdftex.def Info: Appendix/img/11.pdf  used on input line 68.
@@ -1245,7 +1230,7 @@ Package pdftex.def Info: Appendix/img/11.pdf  used on input line 68.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/12.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/12.pdf, id=1648, 963.6pt x 542.025pt>
+<Appendix/img/12.pdf, id=1650, 963.6pt x 542.025pt>
 File: Appendix/img/12.pdf Graphic file (type pdf)
 <use Appendix/img/12.pdf>
 Package pdftex.def Info: Appendix/img/12.pdf  used on input line 73.
@@ -1253,7 +1238,7 @@ Package pdftex.def Info: Appendix/img/12.pdf  used on input line 73.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/13.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/13.pdf, id=1649, 963.6pt x 542.025pt>
+<Appendix/img/13.pdf, id=1651, 963.6pt x 542.025pt>
 File: Appendix/img/13.pdf Graphic file (type pdf)
 <use Appendix/img/13.pdf>
 Package pdftex.def Info: Appendix/img/13.pdf  used on input line 78.
@@ -1261,7 +1246,7 @@ Package pdftex.def Info: Appendix/img/13.pdf  used on input line 78.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/14.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/14.pdf, id=1650, 963.6pt x 542.025pt>
+<Appendix/img/14.pdf, id=1652, 963.6pt x 542.025pt>
 File: Appendix/img/14.pdf Graphic file (type pdf)
 <use Appendix/img/14.pdf>
 Package pdftex.def Info: Appendix/img/14.pdf  used on input line 83.
@@ -1269,7 +1254,7 @@ Package pdftex.def Info: Appendix/img/14.pdf  used on input line 83.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/15.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/15.pdf, id=1651, 963.6pt x 542.025pt>
+<Appendix/img/15.pdf, id=1653, 963.6pt x 542.025pt>
 File: Appendix/img/15.pdf Graphic file (type pdf)
 <use Appendix/img/15.pdf>
 Package pdftex.def Info: Appendix/img/15.pdf  used on input line 88.
@@ -1277,7 +1262,7 @@ Package pdftex.def Info: Appendix/img/15.pdf  used on input line 88.
 
 
 pdfTeX warning: pdflatex.exe (file ./Appendix/img/16.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Appendix/img/16.pdf, id=1652, 963.6pt x 542.025pt>
+<Appendix/img/16.pdf, id=1654, 963.6pt x 542.025pt>
 File: Appendix/img/16.pdf Graphic file (type pdf)
 <use Appendix/img/16.pdf>
 Package pdftex.def Info: Appendix/img/16.pdf  used on input line 93.
@@ -1331,16 +1316,16 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  18830 strings out of 478268
  334882 string characters out of 5850346
- 759464 words of memory out of 5000000
+ 759465 words of memory out of 5000000
  36342 multiletter control sequences out of 15000+600000
  511799 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,15n,117p,1923b,746s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {d:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (64 pages, 99111025 bytes).
+Output written on main.pdf (64 pages, 99111392 bytes).
 PDF statistics:
- 1873 PDF objects out of 2073 (max. 8388607)
- 1260 compressed objects within 13 object streams
+ 1875 PDF objects out of 2073 (max. 8388607)
+ 1262 compressed objects within 13 object streams
  188 named destinations out of 1000 (max. 500000)
  461 words of extra memory for PDF output out of 10000 (max. 10000000)
 

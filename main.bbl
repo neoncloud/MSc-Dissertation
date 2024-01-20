@@ -82,6 +82,14 @@ Leon~A. Gatys, Alexander~S. Ecker, and Matthias Bethge.
 \newblock A neural algorithm of artistic style.
 \newblock {\em ArXiv preprint}, abs/1508.06576, 2015.
 
+\bibitem{tsumuraImagebasedSkinColor}
+Norimichi Tsumura, Nobutoshi Ojima, Kayoko Sato, Mitsuhiro Shiraishi, Hideto
+  Shimizu, Hirohide Nabeshima, Syuuichi Akazaki, Kimihiko Hori, and Yoichi
+  Miyake.
+\newblock Image-based skin color and texture analysis/synthesis by extracting
+  hemoglobin and melanin information in the skin.
+\newblock page~10.
+
 \bibitem{alalufEthnicVariationMelanin2002a}
 Simon Alaluf, Derek Atkins, Karen Barrett, Margaret Blount, Nik Carter, and
   Alan Heath.
@@ -248,14 +256,6 @@ Geunho Jung, Semin Kim, Jongha Lee, and Sangwook Yoo.
 \newblock Deep learning-based optical approach for skin analysis of melanin and
   hemoglobin distribution.
 \newblock 28(3):035001.
-
-\bibitem{tsumuraImagebasedSkinColor}
-Norimichi Tsumura, Nobutoshi Ojima, Kayoko Sato, Mitsuhiro Shiraishi, Hideto
-  Shimizu, Hirohide Nabeshima, Syuuichi Akazaki, Kimihiko Hori, and Yoichi
-  Miyake.
-\newblock Image-based skin color and texture analysis/synthesis by extracting
-  hemoglobin and melanin information in the skin.
-\newblock page~10.
 
 \bibitem{Whitmore2000}
 S.Elizabeth Whitmore and N.Joan~Glavan Sago.
