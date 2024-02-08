@@ -13,40 +13,45 @@
 \end{figure}
 
 \section{Skin Chromophore Color Space Decomposition}
-In digital photos, skin color represents only a small subset of the sRGB space, due to unique chromophores contained in the skin, such as melanin and heamoglobin, which give the skin a unique and limited color range. However, finding a transformation from sRGB values to the absolute concentration of skin chromophores is challenging, as the sRGB color space is device-agnostic. It also requires calibrating the camera system using pigmentation data in vivo. This issue is bypassed by modeling the \textit{relative} pigment concentration against the base skin, so that the transformed color space can well express the influence of different chromophores on skin color without the need for camera system calibration.
+In digital photos, skin color represents only a small subset of the sRGB space, as it shown in Figure\ref{fig:3dplot}. This unique and limited color range is rendered by chromophores contained in the skin like melanin and heamoglobin. However, finding a transformation from sRGB values to the absolute concentration of skin chromophores is challenging, as the sRGB color space is device-agnostic. It also requires calibrating the camera system using data in vivo. This issue is bypassed by modeling the \textit{relative} chromophores concentration against the base skin, so that the transformed color space can well express the influence of different chromophores on skin color without the need for camera system calibration.
 
-Specifically, the relative absorption of incident light by the chromophore can be described by the Beer-Lambert law, namely:
+Specifically, the relative absorption of incident light by the chromophore can be described by the Beer-Lambert law\cite{spigulis2017smartphone}, namely:
 \begin{equation}
     A(\lambda) = -log(R(\lambda)) = C\epsilon l,
     \label{eq1}
 \end{equation}
 where $A$ represents absorption, $R$ is the reflection intensity, $\lambda$ is the wavelengths, $C$ is the relative concentration, $\epsilon$ denotes the extinction coefficient of chromophore and $l$ is the mean optical path length.
 
-In this work, the impact of two chromophores on the skin, melanin and heamoglobin, and a residual term, are mainly considered, as shown in Figure \ref{fig:skin_model}. Therefore, $C\epsilon l$ in equation \ref{eq1} expands as
+In this work, the impact of two chromophores on the skin, melanin and heamoglobin, and a residual term, are mainly considered, as shown in Figure \ref{fig:skin_model}. Therefore, this work proposes to expand $C\epsilon l$ in equation \ref{eq1} as
 \begin{equation}
     A(\lambda) = C_H\epsilon_H(\lambda)l_H + C_M\epsilon_M(\lambda)l_M + C_r\epsilon_r(\lambda)l_r,
     \label{eq2}
 \end{equation}
 where subscript $H$, $M$, and $r$ represent heamoglobin, melanin, and residual chromophore, respectively.
 
-Given the distinct absorption and reflection properties of skin chromophores under varying wavelengths of light, the response of each chromophore is considered across the three primary camera pixel channels: Red ($\mathcal{R}$), Green ($\mathcal{G}$), and Blue ($\mathcal{B}$). This consideration leads to the formulation of Equations \ref{eq1} and \ref{eq2}. These equations model the chromophore response in the context of the color channels, providing a foundation for further analysis and image processing within the scope of the proposed method.
+Given the distinct absorption and reflection properties of skin chromophores under varying wavelengths of light, the response of each chromophore is considered across the three primary camera pixel channels: Red ($\mathcal{R}$), Green ($\mathcal{G}$), and Blue ($\mathcal{B}$), formulated as
 \begin{equation}
     \begin{aligned}
          & C_H\epsilon_H^c l_H + C_M\epsilon_M^c l_M + C_r\epsilon_r^c l_r = -log(R^c) \\
          & c\in\{\mathcal{R},\mathcal{G},\mathcal{B}\},
     \end{aligned}
+    \label{eqn:3chn}
 \end{equation}
 or in matrix form
-\begin{gather*}
-    \mathbf{E}\mathbf{c}=-log(\mathbf{k}),\\
-    \mathbf{E}=\begin{bmatrix}
-        \epsilon_H^\mathcal{R} l_H & \epsilon_M^\mathcal{R} l_M & \epsilon_r^\mathcal{R} l_r \\
-        \epsilon_H^\mathcal{G} l_H & \epsilon_M^\mathcal{G} l_M & \epsilon_r^\mathcal{G} l_r \\
-        \epsilon_H^\mathcal{B} l_H & \epsilon_M^\mathcal{B} l_M & \epsilon_r^\mathcal{B} l_r
-    \end{bmatrix},\
-    \mathbf{c}=\begin{bmatrix}C_H \\C_M \\C_r\end{bmatrix},\
-    \mathbf{k}=\begin{bmatrix}R^\mathcal{R} \\R^\mathcal{G} \\R^\mathcal{B}\end{bmatrix}.
-\end{gather*}
+\begin{equation}
+    \begin{gathered}
+        \mathbf{E}\mathbf{c}=-log(\mathbf{k}),\\
+        \mathbf{E}=\begin{bmatrix}
+            \epsilon_H^\mathcal{R} l_H & \epsilon_M^\mathcal{R} l_M & \epsilon_r^\mathcal{R} l_r \\
+            \epsilon_H^\mathcal{G} l_H & \epsilon_M^\mathcal{G} l_M & \epsilon_r^\mathcal{G} l_r \\
+            \epsilon_H^\mathcal{B} l_H & \epsilon_M^\mathcal{B} l_M & \epsilon_r^\mathcal{B} l_r
+        \end{bmatrix},\
+        \mathbf{c}=\begin{bmatrix}C_H \\C_M \\C_r\end{bmatrix},\
+        \mathbf{k}=\begin{bmatrix}R^\mathcal{R} \\R^\mathcal{G} \\R^\mathcal{B}\end{bmatrix}.
+        \label{eqn:3chn_mat}
+    \end{gathered}
+\end{equation}
+Equations \ref{eqn:3chn} and \ref{eqn:3chn_mat} model the chromophore response in the context of the color channels, providing a foundation for further analysis and image processing within the scope of the proposed method.
 
 \begin{figure}[t!]
     \centering
@@ -55,7 +60,7 @@ or in matrix form
     \label{fig:3dplot}
 \end{figure}
 
-It is reported that there is no significant difference in skin thickness between human races\cite{Whitmore2000}. In other words, $l$ can be seen as a constant. So $l$ is combined with $\epsilon$ in $\mathbf{E}$. Following the practice of Tsumura et al.\cite{tsumura1999independent}, $E$ is estimated by Fast Independent Component Analysis (FastICA)\cite{HYVARINEN2000411} in the log-RGB domain. Specifically, 128 patches are randomly sampled from each face skin image of the dataset, and each patch is 16x16 pixels in size. Then the average RGB value of each patch is calculated, as illustrated in Figure\ref{fig:3dplot}. The FastICA algorithm in \texttt{sklearn}\cite{scikit-learn} is adopted to estimate the 3 independent components over the log-RGB domain as $\mathbf{E}$. In this work, $\hat{\mathbf{E}}$ is obtained as follows:
+It is reported that there is no significant difference in skin thickness between human races\cite{Whitmore2000}. In other words, $l$ can be seen as a constant. Thus, in this work, $l$ is proposed to be combined with $\epsilon$ in $\mathbf{E}$. Following the practice of Tsumura et al.\cite{tsumura1999independent}, $E$ is estimated by Fast Independent Component Analysis (FastICA)\cite{HYVARINEN2000411} in the log-RGB domain. Specifically, 128 patches are randomly sampled from each face skin image of the dataset, and each patch is 16x16 pixels in size. Then the average RGB value of each patch is calculated, as illustrated in Figure\ref{fig:3dplot}. The FastICA algorithm in \texttt{sklearn}\cite{scikit-learn} is adopted to estimate the 3 independent components over the log-RGB domain as $\mathbf{E}$. In the proposed method, $\hat{\mathbf{E}}$ is obtained as follows:
 \begin{equation}
     \hat{\mathbf{E}} = \begin{bmatrix}
         0.96  & -0.63 & 0.9  \\
@@ -65,11 +70,11 @@ It is reported that there is no significant difference in skin thickness between
 \end{equation}
 
 \section{Blemishes Appearance Modelling \& Editing}
-Given a 3-channel image patch $C(\mathbf{x})\in\mathbb{R}^{3\times h\times w}, \mathbf{x}\in\mathbb{R}^2$ with length $w$ and height $h$, containing a user-selected blemish, it assumes that the patch can be divided into normal skin $C_K^{skin}$ and blemish $C_K^{blem}$ in chromophore color space, that is
+Given a 3-channel image patch $C(\mathbf{x})\in\mathbb{R}^{3\times h\times w}, \mathbf{x}\in\mathbb{R}^2$ with length $w$ and height $h$, containing a user-selected blemish, the proposed method assumes that the patch can be divided into normal skin $C_K^{skin}$ and blemish $C_K^{blem}$ in chromophore color space, that is
 \begin{equation}
   C_K(\mathbf{x}) = C_K^{skin}(\mathbf{x}) + C_K^{blem}(\mathbf{x}),\quad K\in\{H,M,r\}.
 \end{equation}
-For the estimation of $C_K^{skin}$, it assumes that skin color changes are smooth within a local area. Therefore, it can be fitted by a simple linear model
+For the estimation of $C_K^{skin}$, the proposed method assumes that skin color changes are smooth within a local area. Therefore, $C_K^{skin}$ is proposed to be fitted by a simple linear model
 \begin{equation}
   \hat{C_K^{skin}}(\mathbf{x};\mathbf{k},d)=\mathbf{k}\mathbf{x}+d,\quad\mathbf{k}\in\mathbb{R}^2, d\in\mathbb{R}.
 \end{equation}
@@ -90,11 +95,11 @@ For multivariate Gaussian functions (2D in this research), they can be denoted a
   \end{equation}
 where $\mathbf{\mu}=[\mu_x,\mu_y]^T$ is the centre coordinate $(x,y)$ on the input image plane, $\Sigma\in\mathbb{R}^{2\times2}$ is the covariance matrix and $a$ is the amplitude factor. And note that the above conclusion can also be generalized to this multivariate case.
 
-To better fit variously shaped blemishes and uneven facial areas, $\Sigma$ can be further decomposed into multiplication of rotation matrix $\mathbf{R}$ and scaling matrix $\mathbf{S}$ as
+To better fit variously shaped blemishes and uneven facial areas, the proposed method further decomposes $\Sigma$ into multiplication of rotation matrix $\mathbf{R}$ and scaling matrix $\mathbf{S}$ as
 \begin{equation}
     \Sigma= \mathbf{R}\mathbf{S}\mathbf{S}^T\mathbf{R}^T.
 \end{equation}
-This allows Gaussian functions to stretch and off-axis rotation with an angle of $\theta\in[0,\pi)$, forming ellipsoidal patterns, that is
+This decomposition of $\Sigma$ allows $G$ to stretch and off-axis rotation with an angle of $\theta\in[0,\pi)$, forming ellipsoidal patterns, that is
 \begin{equation}
   \mathbf{R} = \begin{bmatrix}
     \cos\theta & -\sin\theta \\
@@ -110,13 +115,13 @@ Or explicitly
          & x'' = x' \cos\theta - y' \sin\theta,\quad y'' = x' \sin\theta + y' \cos\theta.
     \end{aligned}
 \end{equation}
-Finally, following the existing fast subsurface scattering implementations, the appearance of a blemish under the scattering skin tissue is approximated by sum of multiple Gaussian functions. That is, the estimated distribution $\hat{C_K^{blem}}(\mathbf{x})$ can be denoted by
+Finally, following the existing fast subsurface scattering implementations\cite{10.1145/1073204.1073308, d2007efficient}, this method proposes to approximate the appearance of a blemish under the scattering skin tissue by sum of multiple Gaussian functions $G$. That is, $C_K^{blem}(\mathbf{x})$ is proposed to be approximated by
 \begin{equation}
   % \begin{aligned}
   \hat{C_K^{blem}}(\mathbf{x}; \Theta)=\sum_{i=0}^{N-1}G_i(\mathbf{x}; \Theta_i),\ N\ge1, \Theta_i=\left[a_i, \mathbf{S}_i, \mathbf{\mu}_i, \theta_i\right].
   % \end{aligned}
 \end{equation}
-The parameters are fitted by the Levenberg-Marquardt method\cite{10.1007/BFb0067700} with the \texttt{lmfit} Python library\cite{newville_matthew_2014_11813}. After successful fitting, $\hat{C_K^{skin}}$ is discarded. Instead, $\hat{C_K^{blem}}$ is multiplied with a user-input gain $\alpha_K\in\mathbb{R}$ and add it with the input $C_K(\mathbf{x})$ to amplify/attenuate the blemish intensity to obtain the modified image patch $C_K^{\prime}$, namely
+The overall parameters $\Theta$ are fitted by the Levenberg-Marquardt method\cite{10.1007/BFb0067700} with the \texttt{lmfit} Python library\cite{newville_matthew_2014_11813}. After successful fitting, $\hat{C_K^{skin}}$ is discarded. Instead, $\hat{C_K^{blem}}$ is multiplied with a user-input gain $\alpha_K\in\mathbb{R}$ and add it with the input $C_K(\mathbf{x})$ to amplify/attenuate the blemish intensity to obtain the modified image patch $C_K^{\prime}$, namely
 \begin{equation}
   C_K^{\prime} = C_K+\alpha_K\hat{C_K^{blem}}.
   \label{eqn:alpha}
@@ -126,7 +131,7 @@ Obviously, if $\alpha_K=-1$, the facial blemish will be completely removed from 
 \subsection{Algorithm Implementations}
 \subsubsection{Preporcessing}
 % As shown in Figure \ref{fig:system}, in the pipeline, a skin layer separation filter is first adopted to separate the skin into a surface texture layer (including specular reflections and skin textures) and a scattered chromophore layer. This is implemented using a Gaussian filter with a small variance, small enough to isolate the detail texture of the skin without affecting the underlying assumptions.
-In the proposed methodology, as depicted in Figure \ref{fig:system}, the primary focus is laid on the \textit{Diffusion Layer} of the image. To isolate this layer, a skin layer separation filter is first adopted to separate the skin into a surface \textit{Texture Layer} (including specular reflections and skin textures) and a \textit{Diffusion Layer}. This is implemented using a Gaussian filter with a small variance, small enough to isolate the detail texture of the skin without affecting the underlying assumptions. 
+In the proposed method, as depicted in Figure \ref{fig:system}, the primary focus is laid on the \textit{Diffusion Layer} of the image. To isolate this layer, a skin layer separation filter is first adopted to separate the skin into a surface \textit{Texture Layer} (including specular reflections and skin textures) and a \textit{Diffusion Layer}. This is implemented using a Gaussian filter with a small variance, small enough to isolate the detail texture of the skin without affecting the underlying assumptions. 
 
 Subsequently, in color space transform stage, inverse gamma correction is applied to the standard RGB (sRGB) image to derive linear RGB values. These values are then converted to their logarithmic form, representing an approximation of the real reflectance values, denoted as $R$ in Equation\ref{eq1}. While this approximation may not perfectly mirror the actual scenario, it proves adequate for estimating the relative concentration ratio in comparison to the surrounding skin.
 \subsubsection{Optimizations in Fitting Process}

@@ -33,6 +33,8 @@
 \contentsline {section}{\numberline {5.2}Reality}{35}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Controllability}{38}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Perception Study}{38}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusion}{41}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Conclusion \& Future Work}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusion}{41}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Future Work}{42}{section.6.2}%
 \contentsline {chapter}{References}{43}{chapter*.30}%
 \contentsline {chapter}{Appendix \numberline {A}Simulation on Various Skin Tones}{49}{appendix.a.A}%
